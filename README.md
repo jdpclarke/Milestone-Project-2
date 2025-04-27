@@ -10,7 +10,25 @@ Navigating the requirements for apprenticeship On-The-Job (OTJ) hours can often 
 
 Whether you're an apprentice eager to understand your learning journey and milestones, or an employer striving to effectively manage and mentor your apprentices, ApprentiCalc offers a user-friendly platform to obtain the essential OTJ figures you need, saving you time and reducing the potential for errors.
 
-## 2. User Experience (UX)
+## 2. Rationale
+
+ApprentiCalc is an online tool developed to provide a straightforward and efficient means of calculating the minimum On-The-Job (OTJ) hours required for various apprenticeship programmes. Its primary objective is to simplify the process of understanding and determining these essential training requirements for both apprentices and employers.
+
+The inspiration for ApprentiCalc arose from observing the often confusing and time-consuming nature of deciphering apprenticeship OTJ guidelines. Many individuals and organisations struggle to readily access and accurately calculate these figures, leading to potential misunderstandings, administrative burdens, and even non-compliance. This project aims to address this gap by providing a user-friendly and readily accessible solution.
+
+Apprenticeships are a vital pathway for skills development and workforce training. A key component of any apprenticeship is the mandated On-The-Job training, which ensures practical experience alongside theoretical learning. However, the specific minimum hours required can vary significantly depending on the sector, level, and governing body of the apprenticeship. This variability often necessitates careful review of complex documentation and manual calculations, which can be prone to error and inefficient.
+
+The core problem that ApprentiCalc seeks to resolve is the difficulty and inefficiency associated with determining the minimum required On-The-Job training hours for apprenticeships. This can lead to wasted time for administrators, potential misinterpretations of regulations, and uncertainty for apprentices regarding their training progress.
+
+ApprentiCalc offers a user-friendly online platform where users can input relevant details about their apprenticeship (e.g., sector, level, duration). The tool will then automatically calculate and display the minimum required OTJ hours based on pre-loaded or easily configurable parameters. Key features include an intuitive interface, clear presentation of results, and the potential for future integration of specific apprenticeship frameworks. This approach provides a unique and accessible alternative to manual calculations and sifting through lengthy documents.
+
+ApprentiCalc offers several advantages over current methods. It provides a significant time-saving for administrators and apprentices alike. The automated calculations reduce the risk of human error, ensuring greater accuracy and compliance. Furthermore, the clear and accessible output empowers apprentices to better understand their training requirements and track their progress effectively. For employers, it streamlines the management of apprenticeship programmes and aids in ensuring adherence to regulatory standards.
+
+The initial scope of ApprentiCalc focuses on providing accurate calculations for a range of common apprenticeship frameworks. Acknowledged limitations include the need for ongoing updates to reflect changes in regulations and the potential initial focus on specific sectors. Potential future enhancements for ApprentiCalc include the integration of progress tracking features, the ability to save and export calculations, the inclusion of links to relevant regulatory documents, and the expansion to cover a wider range of apprenticeship frameworks and regions.
+
+In summary, ApprentiCalc addresses a significant need by providing a user-friendly and accurate solution for calculating minimum apprenticeship On-The-Job training hours. By simplifying this process, the tool has the potential to save time, reduce errors, improve understanding, and ultimately contribute to the more effective management and successful completion of apprenticeships.
+
+## 3. User Experience (UX)
 
 ### User Stories
 
