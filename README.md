@@ -18,7 +18,7 @@ Whether you're an apprentice eager to understand your learning journey and miles
 
 - **Colour Scheme**
 
-  As the project is based around apprenticeships and OTJ Calculations, the colours have been based on the Insitute for Apprenticeships and Technical Education (IfATE) logo. The below colour palette was generated from the Front of the Queen Elizabeth II note using [IMAGECOLORPICKER.com](https://imagecolorpicker.com/)
+  As the project is based around apprenticeships and OTJ Calculations, the colours have been based on the Insitute for Apprenticeships and Technical Education (IfATE) logo. The below colour palette was generated from the IfATE logo using [IMAGECOLORPICKER.com](https://imagecolorpicker.com/)
 
   ![Colour palette for this project](assets/readme/colour-palette.png)
 
