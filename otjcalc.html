@@ -46,7 +46,71 @@
     <!-- Link to CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg fixed-top"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <!-- Added a logo with a link that takes the user back to the home page when clicked -->
+        <a id="nav-logo" class="navbar-brand" href="index.html">
+          <img
+            src="assets/images/logo-wide.png"
+            alt="ApprentiCalc Logo"
+            class="logo"
+          />
+        </a>
+        <!-- A button that displays on smaller devices to toggles the nav menu items when clicked -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Icon for the nav menu toggle button -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Nav bar links, enclosed in the div with navbar-collapse attribute so this appears and disappears when the button is clicked -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <!-- Added active class and aria-current attribute to highlight this link on the navbar to show this is the poge the user is on.-->
+              <a class="nav-link" href="index.html ">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="otjcalc.html "
+                >Let's OTJ this!</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header to provide introductory information and key headlines to users on their visit -->
+    <header id="header" class="container section"></header>
+    <!-- Main body of page to hold sections -->
+    <main id="main"></main>
+    <!-- Footer showing disclaimer/copyright, contact details, social links and a map with location -->
+    <!-- Class added to ensure this remains at the bottom of the page -->
+    <footer id="footer" class="md-auto">
+      <div class="container section">
+        <div class="row">
+          <p>
+            <!-- Copyright icon -->
+            <i class="fa-regular fa-copyright"></i>
+            Copyright ApprentiCalc 2025
+          </p>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
