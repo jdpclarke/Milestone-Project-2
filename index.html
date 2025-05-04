@@ -46,12 +46,12 @@
     <!-- Link to CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top"
-      data-bs-theme="light"
+      data-bs-theme="dark"
     >
       <div class="container">
         <!-- Added a logo with a link that takes the user back to the home page when clicked -->
@@ -92,16 +92,23 @@
       </div>
     </nav>
     <!-- Header to provide introductory information and key headlines to users on their visit -->
-    <header></header>
+    <header id="header" class="container section"></header>
     <!-- Main body of page to hold sections -->
-    <main></main>
+    <main>
+        <p>Placeholder</p>
+    </main>
     <!-- Footer showing disclaimer/copyright, contact details, social links and a map with location -->
-    <footer id="foot">
-        <p>
+    <!-- Class added to ensure this remains at the bottom of the page -->
+    <footer id="foot" class="md-auto">
+      <div class="container section">
+        <div class="row">
+          <p>
             <!-- Copyright icon -->
             <i class="fa-regular fa-copyright"></i>
             Copyright FE Funding 4 U 2025
           </p>
+        </div>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript -->
     <script
