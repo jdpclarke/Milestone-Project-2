@@ -16,16 +16,15 @@
 }
 
 /* Element Styles */
-.acbar {
-    color: var(--Green);
-    border-width: 7.5px;
+.accard {
+    margin-bottom: 3rem;
 }
 
 /* Header */
 /* Applies secondary font to all elements in the header with the lead class */
 #header {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .header-image {
