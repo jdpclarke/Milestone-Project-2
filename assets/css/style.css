@@ -8,12 +8,33 @@
   --background-color: #01223b; /* Midnight */
   --font-color-light: #f5f5f5; /* White Smoke */
   --font-color-dark: #292929; /* Mine Shaft */
+  --IfATE: #046cbb; /* Science Blue */
   --Blue: #035390; /* Congress Blue */
   --Purple: #7804bb; /* Purple */
   --Orange: #bb5304; /* Rose of Sharon */
   --Green: #6cbb04; /* Limeade */
   --Pink: #bb04a9; /* Violet Eggplant */
 }
+
+/* Button Styles */
+/* Styles the buttons to match the design of the website and applies a hover interaction */
+.ac-button {
+    color: var(--font-color-light);
+    font-family: var(--primary-font);
+    font-weight: bold;
+    background-color: var(--Blue);
+    border-color: var(--Purple);
+    border-width: 4px;
+
+    margin-top: 0.5rem;
+    transition: color 2s ease-in-out;
+  }
+  
+  /* Hover interaction */
+  .ac-button:hover {
+    background-color: var(--IfATE);
+    border-color: var(--Purple);
+  }
 
 /* Element Styles */
 .accard {
@@ -29,6 +50,10 @@
 
 .header-image {
     height:fit-content;
+}
+
+#main {
+    margin-bottom: 3rem; 
 }
 
 /* Navigation Menu */
@@ -54,7 +79,7 @@
 /* Footer for all pages */
 #footer {
     font-family: var(--primary-font);
-    background-color: var(--Purple);
+    background-color: var(--Pink);
     padding-top: 1rem;
   }
 
