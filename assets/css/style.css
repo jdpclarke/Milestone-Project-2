@@ -15,6 +15,12 @@
   --Pink: #bb04a9; /* Violet Eggplant */
 }
 
+/* Element Styles */
+.acbar {
+    color: var(--Green);
+    border-width: 7.5px;
+}
+
 /* Header */
 /* Applies secondary font to all elements in the header with the lead class */
 #header {
@@ -44,6 +50,17 @@
 
 #main {
     flex-grow: 1
+}
+
+/* Footer for all pages */
+#footer {
+    font-family: var(--primary-font);
+    background-color: var(--Purple);
+    padding-top: 1rem;
+  }
+
+#footer p {
+    text-align: center;
 }
 
 /* Basic and Universal Styles across all pages*/
@@ -76,9 +93,5 @@ body {
     text-align: justify;
   }
 
-/* Footer for all pages */
-#footer {
-    font-family: var(--primary-font);
-    background-color: var(--Purple);
-  }
+
  
