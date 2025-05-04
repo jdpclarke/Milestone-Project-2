@@ -40,3 +40,10 @@ body {
 
   padding-top: 81.77px;
 }
+
+/* Footer for all pages */
+#foot {
+    font-family: var(--primary-font);
+    background-color: var(--Purple);
+  }
+ 
