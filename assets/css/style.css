@@ -41,6 +41,20 @@
     margin-bottom: 3rem;
 }
 
+/* Styles for links and to make them reactive */
+.inline-link {
+    font-family: var(--primary-font);
+    font-weight: bolder;
+    padding: 5px;
+    color: var(--IfATE);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .inline-link:hover {
+    color: var(--Purple);
+  }
+
 /* Header */
 /* Applies secondary font to all elements in the header with the lead class */
 #header {
