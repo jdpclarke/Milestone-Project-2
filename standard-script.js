@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const monthsInput = document.getElementById('months');
   const weeksInput = document.getElementById('weeks');
 
-  // **** THE ONLY CHANGE IS THIS LINE ****
-  fetch('assets/data-sources/standard.xml') // Updated path to your XML file
+  fetch('assets/data-sources/standard.xml')
     .then(response => {
       // Check if the request was successful
       if (!response.ok) {
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('Error fetching or parsing XML:', error);
-      // You might want to display an error message to the user here as well
+      // diplay error message if file fails to read.
       alert('Failed to load apprenticeship standards. Please try again later.');
     });
 });
