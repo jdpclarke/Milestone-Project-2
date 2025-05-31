@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   fetch('assets/data-sources/standard.xml')
     .then(response => {
-      // Check if the request was successful
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -20,7 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(xmlString => {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
-      const standards = xmlDoc.querySelectorAll('standard');
+      let standards = xmlDoc.querySelectorAll('standard'); // Use 'let' because we'll reassign
+
+      // Convert NodeList to an array and sort it by 'lars' value
+      standards = Array.from(standards).sort((a, b) => {
+        const larsA = parseInt(a.querySelector('lars').textContent, 10);
+        const larsB = parseInt(b.querySelector('lars').textContent, 10);
+        return larsA - larsB; // Sorts numerically in ascending order
+      });
 
       standards.forEach(standard => {
         const id = standard.querySelector('id').textContent;
@@ -47,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
           monthsInput.value = selectedStandard.querySelector('months').textContent;
           weeksInput.value = selectedStandard.querySelector('weeks').textContent;
         } else {
-          // Clear all fields if no standard is selected (e.g., "-- Select a Standard --")
           idInput.value = '';
           larsInput.value = '';
           titleInput.value = '';
@@ -61,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('Error fetching or parsing XML:', error);
-      // diplay error message if file fails to read.
       alert('Failed to load apprenticeship standards. Please try again later.');
     });
 });
