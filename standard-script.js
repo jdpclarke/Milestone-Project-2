@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const standardSelect = document.getElementById('standard-select');
   const idInput = document.getElementById('id');
   const larsInput = document.getElementById('lars');
-  const titleInput = document.getElementById('title');
   const nameInput = document.getElementById('name');
   const levelInput = document.getElementById('level');
   const fundingMaximumInput = document.getElementById('funding_maximum');
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selectedStandard) {
           idInput.value = selectedStandard.querySelector('id').textContent;
           larsInput.value = selectedStandard.querySelector('lars').textContent;
-          titleInput.value = selectedStandard.querySelector('title').textContent;
           nameInput.value = selectedStandard.querySelector('name').textContent;
           levelInput.value = selectedStandard.querySelector('level').textContent;
           fundingMaximumInput.value = selectedStandard.querySelector('funding_maximum').textContent;
@@ -55,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           idInput.value = '';
           larsInput.value = '';
-          titleInput.value = '';
           nameInput.value = '';
           levelInput.value = '';
           fundingMaximumInput.value = '';
