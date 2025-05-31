@@ -122,6 +122,43 @@
                 <option value="">-- Select a Standard --</option>
               </select>
             </div>
+            <div class="col-12 mb-3">
+              <h6>Standard Details:</h6>
+
+              <label for="id">ID:</label>
+              <input type="text" id="id" name="id" readonly /><br /><br />
+
+              <label for="lars">LARS Number:</label>
+              <input type="text" id="lars" name="lars" readonly /><br /><br />
+
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" readonly /><br /><br />
+
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" readonly /><br /><br />
+
+              <label for="level">Level:</label>
+              <input type="text" id="level" name="level" readonly /><br /><br />
+
+              <label for="funding_maximum">Maximum Funding:</label>
+              <input
+                type="text"
+                id="funding_maximum"
+                name="funding_maximum"
+                readonly
+              /><br /><br />
+
+              <label for="months">Duration (Months):</label>
+              <input
+                type="text"
+                id="months"
+                name="months"
+                readonly
+              /><br /><br />
+
+              <label for="weeks">Duration (Weeks):</label>
+              <input type="text" id="weeks" name="weeks" readonly /><br /><br />
+            </div>
           </div>
         </div>
       </section>
@@ -142,75 +179,9 @@
       </div>
     </footer>
 
-    <!-- script for updating the standard detail fields dependant on the state of the standard selector-->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const standardSelect = document.getElementById("standard-select");
-        const idInput = document.getElementById("id");
-        const larsInput = document.getElementById("lars");
-        const titleInput = document.getElementById("title");
-        const nameInput = document.getElementById("name");
-        const levelInput = document.getElementById("level");
-        const fundingMaximumInput = document.getElementById("funding_maximum");
-        const monthsInput = document.getElementById("months");
-        const weeksInput = document.getElementById("weeks");
+    <!-- Standard selector Javascript-->
+    <script src="standard-script.js"></script>
 
-        fetch("standard.xml")
-          .then((response) => response.text())
-          .then((xmlString) => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlString, "assets/data-sources/standard.xml");
-            const standards = xmlDoc.querySelectorAll("standard");
-
-            standards.forEach((standard) => {
-              const id = standard.querySelector("id").textContent;
-              const title = standard.querySelector("title").textContent;
-              const option = document.createElement("option");
-              option.value = id;
-              option.textContent = title;
-              standardSelect.appendChild(option);
-            });
-
-            standardSelect.addEventListener("change", function () {
-              const selectedId = this.value;
-              const selectedStandard = xmlDoc.querySelector(
-                `standard:has(id:contains("${selectedId}"))`
-              );
-
-              if (selectedStandard) {
-                idInput.value =
-                  selectedStandard.querySelector("id").textContent;
-                larsInput.value =
-                  selectedStandard.querySelector("lars").textContent;
-                titleInput.value =
-                  selectedStandard.querySelector("title").textContent;
-                nameInput.value =
-                  selectedStandard.querySelector("name").textContent;
-                levelInput.value =
-                  selectedStandard.querySelector("level").textContent;
-                fundingMaximumInput.value =
-                  selectedStandard.querySelector("funding_maximum").textContent;
-                monthsInput.value =
-                  selectedStandard.querySelector("months").textContent;
-                weeksInput.value =
-                  selectedStandard.querySelector("weeks").textContent;
-              } else {
-                idInput.value = "";
-                larsInput.value = "";
-                titleInput.value = "";
-                nameInput.value = "";
-                levelInput.value = "";
-                fundingMaximumInput.value = "";
-                monthsInput.value = "";
-                weeksInput.value = "";
-              }
-            });
-          })
-          .catch((error) => {
-            console.error("Error fetching or parsing XML:", error);
-          });
-      });
-    </script>
     <!-- Bootstrap JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
