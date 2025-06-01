@@ -21,13 +21,13 @@
 
 .accordion-button:not(.collapsed) {
   background-color: var(--Purple);
-  color: var(--font-color-light);
+  color: var(--font-color-light) !important;
   box-shadow: none;
 }
 
 .accordion-button:is(.collapsed) {
   background-color: var(--Purple);
-  color: var(--font-color-light);
+  color: var(--font-color-light) !important; 
   box-shadow: none;
 }
 
