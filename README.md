@@ -296,3 +296,43 @@ ApprentiCalc is designed as an intuitive tool for quickly calculating minimum On
 
 - **Information Only:** This calculator provides an estimation of minimum OTJ hours for informational purposes only.
 - **Seek Professional Advice:** It is not a substitute for professional advice. Always refer to official government guidance (e.g., ESFA rules) and consult with a certified training provider or careers advisor for definitive and personalised advice regarding apprenticeship requirements.
+
+## 8. Deployment
+
+This project, ApprentiCalc, was deployed using GitHub Pages, making it accessible directly from a GitHub repository.
+
+**GitHub Pages Deployment:**
+
+The project was deployed to GitHub Pages using the following steps:
+
+1. **Log in to GitHub and locate the GitHub Repository:** Navigate to the project's repository on GitHub: [https://github.com/jdpclarke/Milestone-Project-2.git](https://github.com/jdpclarke/Milestone-Project-2.git)
+2. **Access Repository Settings:** At the top of the repository (not the top of the page), locate the "Settings" button on the menu.
+3. **Navigate to GitHub Pages Section:** Scroll down the Settings page until you find the "Pages" section.
+4. **Select Deployment Branch:** Under "Source," click the dropdown menu and select the branch you wish to deploy (usually "main" or "master").
+5. **GitHub Pages Deployment:** The page will automatically refresh, and GitHub Pages will deploy the site from the selected branch.
+6. **Access the Deployed Site:** Scroll back down the page to the "Pages" section to find the published site link.
+
+**Forking the GitHub Repository:**
+
+To create a copy of this repository on your own GitHub account, allowing you to view and modify the code without affecting the original, follow these steps:
+
+1. **Log in to GitHub and locate the GitHub Repository:** Navigate to the project's repository on GitHub: [https://github.com/jdpclarke/Milestone-Project-2.git](https://github.com/jdpclarke/Milestone-Project-2.git)
+2. **Fork the Repository:** At the top of the repository (not the top of the page), just above the "Settings" button, locate the "Fork" button and click it.
+3. **Your Forked Copy:** You will now have a copy of the original repository in your GitHub account.
+
+**Making a Local Clone:**
+
+To download a local copy of this repository to your computer, follow these steps:
+
+1. **Log in to GitHub and locate the GitHub Repository:** Navigate to the project's repository on GitHub: [https://github.com/jdpclarke/Milestone-Project-2.git](https://github.com/jdpclarke/Milestone-Project-2.git)
+2. **Clone or Download:** Under the repository name, click "Code."
+3. **Copy HTTPS Link:** Under "Clone with HTTPS," copy the provided link.
+4. **Open Git Bash (or your terminal):** Open your Git Bash terminal (or your preferred terminal).
+5. **Change Directory:** Change the current working directory to the location where you want the cloned directory to be created using the `cd` command.
+6. **Clone the Repository:** Type `git clone` and then paste the URL you copied in Step 3. Press Enter.
+
+    ```bash
+    git clone [https://github.com/jdpclarke/Milestone-Project-2.git](https://github.com/jdpclarke/Milestone-Project-2.git)
+    ```
+
+7. **Local Clone Created:** Your local clone will be created in the specified directory.
