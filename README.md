@@ -152,7 +152,7 @@ This website utilises a variety of images to enhance the user experience and con
 
 - **Branding:** The logo (`assets/images/logo.png`) is used in the navigation bar to reinforce brand identity and provide a consistent visual element throughout the site.
 
-- **Informational Images:** Images are incorporated within the accordion sections (`assets/images/esfa-2.jpg`, `assets/images/asf.jpg`) and card components (`assets/images/esfa.jpg`, `assets/images/career-search.jpg`, `assets/images/ncs.webp`, `assets/images/funding-grants.jpg`) to illustrate concepts, break up text, and make the content more engaging. These images are carefully selected to be relevant to the surrounding information.
+- **Informational Images:** Images are incorporated within the card components (`assets/images/apprenticeship.jpg`, `assets/images/apprenticeship-2.jpg`, `assets/images/apprenticeship-3.jpg`, `assets/images/apprenticeship-4.jpg`) to illustrate concepts, break up text, and make the content more engaging. These images are carefully selected to be relevant to the surrounding information.
 
 - **Favicon:** A favicon (`assets/favicon/apple-icon.png`, `assets/favicon/favicon-32x32.png`, `assets/favicon/favicon-16x16.png`) is included to provide a visual cue for the website in browser tabs and bookmarks. This also provides a first look in to the brand of the website.
 
@@ -218,3 +218,40 @@ ApprentiCalc, an interactive tool designed to simplify apprenticeship On-The-Job
 - **Font Awesome:** Font Awesome icons were integrated into the website to enhance visual appeal and improve user experience. Icons were used to represent different sections and concepts, making the content more engaging and easier to understand. The use of icons also contributes to a more intuitive navigation experience.
 
 - **CDN (Content Delivery Network):** External libraries, such as Bootstrap's CSS and JavaScript, are loaded from a CDN. This optimizes loading times by utilizing geographically distributed servers to deliver content efficiently.
+
+## 5. Installation
+
+To view and run the ApprentiCalc website locally, follow these steps:
+
+1. **Clone the Repository:**
+    - Open your terminal or command prompt.
+    - Navigate to the directory where you want to store the project.
+    - Execute the following command:
+
+        ```bash
+        git clone https://github.com/jdpclarke/Milestone-Project-2.git
+        ```
+
+2. **Navigate to the Project Directory:**
+    - Use the `cd` (change directory) command to enter the cloned project folder:
+
+        ```bash
+        cd Milestone-Project-2
+        ```
+
+3. **Open `index.html` in Your Web Browser:**
+    - Locate the `index.html` file within the project directory.
+    - Double-click the `index.html` file to open it in your default web browser.
+    - Alternatively, you can right-click the file and select "Open with" followed by your preferred web browser (Chrome, Firefox, Safari, Edge, etc.).
+
+4. **View the Website:**
+    - The ApprentiCalc website should now be displayed in your browser.
+    - You can navigate through the different pages and sections of the website.
+
+**Note:**
+
+- This project is a static website, meaning it does not require a web server to run locally. You can simply open the HTML files directly in your browser.
+- Ensure you have a modern web browser installed on your computer to view the website correctly.
+- If you wish to make changes to the code, you can use a text editor or code editor (e.g., VS Code) to edit the HTML, CSS, and JavaScript files.
+- If you have made changes to the website, simply save the files and refresh your browser to view the updated content.
+- If you have not got git installed you can also download the zip file of the repository, and extract it to your chosen location.
