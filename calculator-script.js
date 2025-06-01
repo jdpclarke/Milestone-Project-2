@@ -85,11 +85,22 @@ function calculateOtjt() {
   if (totalDurationCalculationWeeks < 0) {
     totalDurationCalculationWeeks = 0;
   }
-  
+
   // --- H. Total apprenticeship duration for calculation (C*G) (in hours) ---
   const totalDurationCalculationHours =
     weeklyHours * totalDurationCalculationWeeks;
 
   // --- I. Minimum off-the-job training required (H x 20%) (in hours) ---
   const minOtjtRequired = totalDurationCalculationHours * 0.2;
+
+  // --- Update Display ---
+  // Use toFixed() for consistent decimal places - setting 'value' for input fields
+  durationDaysOutput.value = plannedDurationDays.toFixed(0); // No decimals for days
+  durationWeeksOutput.value = plannedDurationWeeks.toFixed(0); // No decimals for rounded weeks
+  statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(2);
+  totalDurationCalculationWeeksOutput.value =
+    totalDurationCalculationWeeks.toFixed(2);
+  totalDurationCalculationHoursOutput.value =
+    totalDurationCalculationHours.toFixed(2);
+  minOtjtRequiredOutput.value = minOtjtRequired.toFixed(2);
 }
