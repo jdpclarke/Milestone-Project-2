@@ -30,36 +30,40 @@ function calculateOtjt() {
     // Clear previous outputs before validation
     clearOutputFields();
 
+    // Initialize an array to store error messages
+    let errors = [];
+
     // --- Input Validation ---
     // Check if mandatory input fields are empty
     if (!startDateInput.value) {
-        alert('Please enter a start date (A).');
-        return; // Stop calculation
+        errors.push('Please enter a start date (A).');
     }
     if (!endDateInput.value) {
-        alert('Please enter an end date (B).');
-        return; // Stop calculation
+        errors.push('Please enter an end date (B).');
     }
 
-    // Parse dates *after* checking for emptiness
+    // Parse dates *after* checking for emptiness, so we can then check their validity
     const startDate = new Date(startDateInput.value);
     const endDate = new Date(endDateInput.value);
 
-    // Check if parsed dates are valid (e.g., user manually typed an invalid date like "2023-02-30")
-    if (isNaN(startDate.getTime())) {
-        alert('The start date (A) you entered is not a valid date. Please check the format or value.');
-        return;
+    // Check if parsed dates are valid (only if a value was provided in the first place)
+    if (startDateInput.value && isNaN(startDate.getTime())) {
+        errors.push('The start date (A) you entered is not a valid date. Please check the format or value.');
     }
-    if (isNaN(endDate.getTime())) {
-        alert('The end date (B) you entered is not a valid date. Please check the format or value.');
-        return;
+    if (endDateInput.value && isNaN(endDate.getTime())) {
+        errors.push('The end date (B) you entered is not a valid date. Please check the format or value.');
     }
 
     // Parse weekly hours and validate
     let weeklyHours = parseFloat(weeklyHoursInput.value);
     if (isNaN(weeklyHours) || weeklyHours <= 0) {
-        alert('Please enter valid weekly working hours (C) greater than 0.');
-        return; // Stop calculation
+        errors.push('Please enter valid weekly working hours (C) greater than 0.');
+    }
+
+    // If there are any errors, display them all in one alert and stop the function
+    if (errors.length > 0) {
+        alert('Please correct the following issues:\n\n' + errors.join('\n'));
+        return; // Stop calculation if there are errors
     }
 
     // --- Rule for Weekly Working Hours (C): Cap at 30 if start is on or after 1 August 2022 ---
@@ -98,6 +102,7 @@ function calculateOtjt() {
     statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(2);
     totalDurationCalculationWeeksOutput.value = totalDurationCalculationWeeks.toFixed(2);
     totalDurationCalculationHoursOutput.value = totalDurationCalculationHours.toFixed(2);
+    // Rounded to the nearest whole number here:
     minOtjtRequiredOutput.value = minOtjtRequired.toFixed(0);
 }
 
