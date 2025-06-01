@@ -47,11 +47,13 @@ function calculateOtjt() {
         errors.push("Please enter an end date (B).");
     }
 
-    // Parse dates *after* checking for emptiness, so we can then check their validity
+    // Parse dates *after* checking for emptiness,
+    // so we can then check their validity
     const startDate = new Date(startDateInput.value);
     const endDate = new Date(endDateInput.value);
 
-    // Check if parsed dates are valid (only if a value was provided in the first place)
+    // Check if parsed dates are valid
+    // (only if a value was provided in the first place)
     if (startDateInput.value && Number.isNaN(startDate.getTime())) {
         errors.push("The start date (A) you entered is not a valid date. " +
             "Please check the format or value.");
@@ -67,7 +69,8 @@ function calculateOtjt() {
         errors.push("Please enter valid weekly working hours (C) greater than 0.");
     }
 
-    // If there are any errors, display them all in one alert and stop the function
+    // If there are any errors,
+    // display them all in one alert and stop the function
     if (errors.length > 0) {
         alert("Please correct the following issues:\n\n" + errors.join("\n"));
         return; // Stop calculation if there are errors
