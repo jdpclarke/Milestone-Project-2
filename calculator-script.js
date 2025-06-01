@@ -98,7 +98,7 @@ function calculateOtjt() {
     statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(2);
     totalDurationCalculationWeeksOutput.value = totalDurationCalculationWeeks.toFixed(2);
     totalDurationCalculationHoursOutput.value = totalDurationCalculationHours.toFixed(2);
-    minOtjtRequiredOutput.value = minOtjtRequired.toFixed(2);
+    minOtjtRequiredOutput.value = minOtjtRequired.toFixed(0);
 }
 
 // Function to reset the calculator
@@ -115,11 +115,6 @@ function resetCalculator() {
 // --- Event Listeners ---
 // Trigger calculation when the calculate button is clicked
 calculateBtn.addEventListener('click', calculateOtjt);
-
-// Trigger calculation automatically when input values change
-startDateInput.addEventListener('change', calculateOtjt);
-endDateInput.addEventListener('change', calculateOtjt);
-weeklyHoursInput.addEventListener('input', calculateOtjt);
 
 // Add event listener for the reset button
 resetBtn.addEventListener('click', resetCalculator);
