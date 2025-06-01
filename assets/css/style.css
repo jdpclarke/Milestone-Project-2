@@ -93,6 +93,7 @@
 /* Minimum OTJ field colour */
 #minOtjtRequired {
     background-color: var(--Green); 
+    color: var(--font-color-light);
 }
 
 /* Header */
