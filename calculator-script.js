@@ -45,7 +45,7 @@ function calculateOtjt() {
     isNaN(weeklyHours) ||
     weeklyHours < 0
   ) {
-    alert("Please fill in all mandatory fields (A, B, C) correctly.");
+    alert("Please fill in all mandatory fields (A, B, C) correctly."); // Changed to alert
     // Clear any potentially lingering results from previous valid calculation
     durationDaysOutput.value = "";
     durationWeeksOutput.value = "";
@@ -53,6 +53,8 @@ function calculateOtjt() {
     totalDurationCalculationWeeksOutput.value = "";
     totalDurationCalculationHoursOutput.value = "";
     minOtjtRequiredOutput.value = "";
+    // Removed finalOtjtOutput update here
+    // finalOtjtOutput.value = '';
     return; // Stop calculation if essential inputs are invalid
   }
   // --- Rule for Weekly Working Hours (C): Cap at 30 if start is on or after 1 August 2022 ---
@@ -120,7 +122,6 @@ function resetCalculator() {
   totalDurationCalculationWeeksOutput.value = "";
   totalDurationCalculationHoursOutput.value = "";
   minOtjtRequiredOutput.value = "";
-  finalOtjtOutput.value = "Enter details above"; // Reset to initial message
 }
 
 // --- Event Listeners ---
