@@ -2,6 +2,7 @@
 const startDateInput = document.getElementById("startDate");
 const endDateInput = document.getElementById("endDate");
 const weeklyHoursInput = document.getElementById("weeklyHours");
+
 const calculateBtn = document.getElementById("calculateBtn");
 const resetBtn = document.getElementById("resetBtn");
 
@@ -57,31 +58,26 @@ function calculateOtjt() {
     alert("Please enter valid weekly working hours (C) greater than 0.");
     return; // Stop calculation
   }
+
   // --- Rule for Weekly Working Hours (C): Cap at 30 if start is on or after 1 August 2022 ---
   // Use UTC for date comparison to avoid local timezone issues
   const august2022 = new Date("2022-08-01T00:00:00Z");
   if (startDate >= august2022 && weeklyHours > 30) {
     weeklyHours = 30; // Cap the value used for calculation
-    // Optionally, update the input field to show the capped value
-    weeklyHoursInput.value = 30;
+    weeklyHoursInput.value = 30; // Update the input field visually
   }
+
   // --- D. Planned apprenticeship duration (in days) (B-A) ---
-  // Calculate difference in milliseconds, then convert to days.
-  // Using Math.ceil to ensure the end day is fully counted.
   const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
   const plannedDurationDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   // --- E. Planned apprenticeship duration (in weeks) (B-A) ---
-  // Note 1: rounded to a full number (e.g if 52.4 -> 52; 52.6 -> 53)
   const plannedDurationWeeks = Math.round(plannedDurationDays / 7);
 
   // --- F. Statutory leave duration (in weeks) (auto-calculates based on duration) ---
-  // Assuming 5.6 weeks statutory leave for a full year (52 weeks).
-  // Calculate proportionally based on plannedDurationWeeks.
   const statutoryLeaveWeeks = (plannedDurationWeeks / 52) * 5.6;
 
   // --- G. Total apprenticeship duration for calculation (E-F) (in weeks) ---
-  // Ensure duration does not go below zero
   let totalDurationCalculationWeeks =
     plannedDurationWeeks - statutoryLeaveWeeks;
   if (totalDurationCalculationWeeks < 0) {
@@ -96,9 +92,8 @@ function calculateOtjt() {
   const minOtjtRequired = totalDurationCalculationHours * 0.2;
 
   // --- Update Display ---
-  // Use toFixed() for consistent decimal places - setting 'value' for input fields
-  durationDaysOutput.value = plannedDurationDays.toFixed(0); // No decimals for days
-  durationWeeksOutput.value = plannedDurationWeeks.toFixed(0); // No decimals for rounded weeks
+  durationDaysOutput.value = plannedDurationDays.toFixed(0);
+  durationWeeksOutput.value = plannedDurationWeeks.toFixed(0);
   statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(2);
   totalDurationCalculationWeeksOutput.value =
     totalDurationCalculationWeeks.toFixed(2);
@@ -107,15 +102,8 @@ function calculateOtjt() {
   minOtjtRequiredOutput.value = minOtjtRequired.toFixed(2);
 }
 
-// Function to reset the calculator
-function resetCalculator() {
-  // Clear input fields
-  startDateInput.value = "";
-  endDateInput.value = "";
-  weeklyHoursInput.value = "";
-  plannedOtjtInput.value = "";
-
-  // Clear output fields - setting 'value' for input fields
+// Helper function to clear all output fields
+function clearOutputFields() {
   durationDaysOutput.value = "";
   durationWeeksOutput.value = "";
   statutoryLeaveOutput.value = "";
@@ -124,9 +112,28 @@ function resetCalculator() {
   minOtjtRequiredOutput.value = "";
 }
 
+// Function to reset the calculator
+function resetCalculator() {
+  // Clear input fields
+  startDateInput.value = "";
+  endDateInput.value = "";
+  weeklyHoursInput.value = "";
+
+  // Clear all output fields
+  clearOutputFields();
+}
+
 // --- Event Listeners ---
 // Trigger calculation when the calculate button is clicked
 calculateBtn.addEventListener("click", calculateOtjt);
 
+// Trigger calculation automatically when input values change
+startDateInput.addEventListener("change", calculateOtjt);
+endDateInput.addEventListener("change", calculateOtjt);
+weeklyHoursInput.addEventListener("input", calculateOtjt);
+
 // Add event listener for the reset button
 resetBtn.addEventListener("click", resetCalculator);
+
+// Perform an initial reset when the page loads to ensure clean state
+window.onload = resetCalculator;
