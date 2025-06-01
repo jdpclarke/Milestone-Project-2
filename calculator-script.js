@@ -1,3 +1,5 @@
+/*jslint browser: true */
+
 // Get references to all the input and output elements
 const startDateInput = document.getElementById('startDate');
 const endDateInput = document.getElementById('endDate');

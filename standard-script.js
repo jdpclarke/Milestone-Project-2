@@ -1,3 +1,5 @@
+/*jslint browser: true */
+
 document.addEventListener("DOMContentLoaded", function () {
   const standardSelect = document.getElementById("standard-select");
   const idInput = document.getElementById("id");
