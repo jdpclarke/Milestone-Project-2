@@ -63,4 +63,9 @@ function calculateOtjt() {
     // Optionally, update the input field to show the capped value
     weeklyHoursInput.value = 30;
   }
+  // --- D. Planned apprenticeship duration (in days) (B-A) ---
+  // Calculate difference in milliseconds, then convert to days.
+  // Using Math.ceil to ensure the end day is fully counted.
+  const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+  const plannedDurationDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
