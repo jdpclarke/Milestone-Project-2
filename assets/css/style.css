@@ -90,6 +90,11 @@
   color: var(--Purple);
 }
 
+/* Minimum OTJ field colour */
+#minOtjtRequired {
+    background-color: var(--Green); 
+}
+
 /* Header */
 /* Applies secondary font to all elements in the header with the lead class */
 #header {
