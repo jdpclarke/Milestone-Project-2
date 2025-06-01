@@ -77,4 +77,19 @@ function calculateOtjt() {
   // Assuming 5.6 weeks statutory leave for a full year (52 weeks).
   // Calculate proportionally based on plannedDurationWeeks.
   const statutoryLeaveWeeks = (plannedDurationWeeks / 52) * 5.6;
+
+  // --- G. Total apprenticeship duration for calculation (E-F) (in weeks) ---
+  // Ensure duration does not go below zero
+  let totalDurationCalculationWeeks =
+    plannedDurationWeeks - statutoryLeaveWeeks;
+  if (totalDurationCalculationWeeks < 0) {
+    totalDurationCalculationWeeks = 0;
+  }
+  
+  // --- H. Total apprenticeship duration for calculation (C*G) (in hours) ---
+  const totalDurationCalculationHours =
+    weeklyHours * totalDurationCalculationWeeks;
+
+  // --- I. Minimum off-the-job training required (H x 20%) (in hours) ---
+  const minOtjtRequired = totalDurationCalculationHours * 0.2;
 }
