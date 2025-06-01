@@ -365,3 +365,33 @@ This ApprentiCalc project was developed using a combination of publicly availabl
 - **Open-Source Community:** The developer acknowledges the contributions of the open-source community for providing the tools, libraries, and resources used in this project.
 - **Code Institute:** The developer acknowledges the support and guidance provided by Code Institute throughout the project's development.
 - **Feedback Providers:** The developer expresses gratitude to anyone who provides feedback, testing, or suggestions for improvement on this project.
+
+## 10. Future Improvements
+
+ApprentiCalc is a foundational tool, and several enhancements can be implemented to further improve its functionality and user experience.
+
+**1. Enhanced Apprenticeship Standard Data & Integration:**
+
+- **Richer Standard Details:** Expand the data points for each apprenticeship standard beyond current details (e.g., specific entry requirements, typical job roles).
+- **Direct Calculation Integration:** Allow the duration selected from the standard lookup to directly populate the calculator's end date, streamlining the process.
+- **Integrating TNP Reduction Calculations:** Incorporate logic to automatically calculate Total Negotiated Price (TNP) reductions for apprenticeship programs that are delivered over a reduced duration.
+- **Filtering/Search for Standards:** Implement search and filtering options for the apprenticeship standards dropdown if the list becomes extensive.
+
+**2. User Customization and Persistence:**
+
+- **Save Common Inputs:** Allow users to save frequently used inputs (e.g., common weekly hours) for quick recall.
+- **Historical Calculations:** Implement a feature to view or save previous calculation results.
+
+**3. Contextual Help and Guidance:**
+
+- **Tooltips/Information Icons:** Add tooltips or information icons next to input and output fields to provide quick explanations of terms or rules (e.g., explanation of 30-hour cap).
+- **Links to Official Guidance:** Provide direct links within the calculator interface to specific sections of official ESFA or UK government guidance relevant to particular calculation rules.
+
+**4. Performance and Maintainability:**
+
+- **Code Refactoring:** Continuously refactor the codebase to improve performance, readability, and long-term maintainability.
+- **Asset Optimization:** Optimize any images or other assets used on the page to reduce loading times.
+
+**5. Regulatory Updates Mechanism:**
+
+- **Automated Rule Updates:** Explore methods for more easily updating calculation rules (e.g., new 20% requirements, changes to leave entitlement) as government regulations evolve, possibly through an external configuration.
