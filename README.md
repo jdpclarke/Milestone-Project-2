@@ -336,3 +336,32 @@ To download a local copy of this repository to your computer, follow these steps
     ```
 
 7. **Local Clone Created:** Your local clone will be created in the specified directory.
+
+## 9. Credits
+
+This ApprentiCalc project was developed using a combination of publicly available resources, open-source libraries, and original content. Here is a more detailed breakdown of the credits:
+
+**Content and Information:**
+
+- **Education and Skills Funding Agency (ESFA):** The core informational content regarding apprenticeship OTJ calculation rules and the data for apprenticeship standards (e.g., LARS, funding bands) was derived from official ESFA guidance and related UK government publications. This ensured the accuracy and relevance of the calculations and standard details presented.
+- **UK Government Publications:** Relevant government publications and reports related to apprenticeship funding and requirements were consulted to inform the calculation logic.
+
+**Technologies and Libraries:**
+
+- **HTML5:** The semantic structure of the calculator's web page was built using HTML5, ensuring accessibility and clear document outline.
+- **CSS3:** Custom styles and layouts were implemented using CSS3, including the creation of responsive designs for various screen sizes and specific visual enhancements for the calculator interface.
+- **JavaScript:** Primarily used for implementing all custom calculator logic, including date and numerical computations, input validation, dynamic display updates, and asynchronous data fetching and parsing.
+- **XML:** External XML files serve as the data source for apprenticeship standard details, parsed dynamically by JavaScript.
+- **Bootstrap 5:** The Bootstrap 5 framework was used to create a responsive and consistent user interface for the calculator. This included utilizing Bootstrap's grid system and styling for form elements.
+
+**Code and Assets:**
+
+- **Bootstrap 5 Documentation:** The Bootstrap 5 documentation was extensively referenced for code examples, component usage, and responsive design guidelines.
+- **Custom CSS:** The `style.css` file contains custom CSS rules written by the developer to enhance and tailor the calculator's appearance beyond the default Bootstrap styles.
+- **Custom JavaScript:** The `standard-script.js` and `calculator-script.js` contain custom JavaScript code written by the developer for the calculator's logic, validation, calculations, and dynamic content updates.
+
+**Acknowledgements:**
+
+- **Open-Source Community:** The developer acknowledges the contributions of the open-source community for providing the tools, libraries, and resources used in this project.
+- **Code Institute:** The developer acknowledges the support and guidance provided by Code Institute throughout the project's development.
+- **Feedback Providers:** The developer expresses gratitude to anyone who provides feedback, testing, or suggestions for improvement on this project.
