@@ -423,12 +423,12 @@ The ApprentiCalc tool was thoroughly tested across a variety of browsers and dev
 
     This ensured that the code adhered to web standards and was free from syntax errors. Any identified errors were corrected to improve the tool's overall quality and consistency.
 
-    W3C Markup Validation may highlight info messages relating to "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values." These often occur due to auto-formatters (like Prettier); attempts to remove them may result in the formatter re-introducing them.
+    W3C Markup Validation highlights info messages relating to "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values." These often occur due to auto-formatters (like Prettier); attempts to remove them may result in the formatter re-introducing them.
 
-    W3C CSS Validation may highlight warnings related to Bootstrap CSS, which are typically outside the developer's direct control. Warnings referring to custom CSS variables are often noted by the validator, as it acknowledges that CSS variables introduce a level of dynamism beyond the scope of its static analysis.
+    W3C CSS Validation highlightswarnings related to Bootstrap CSS, which are typically outside the developer's direct control. Warnings referring to custom CSS variables are often noted by the validator, as it acknowledges that CSS variables introduce a level of dynamism beyond the scope of its static analysis.
 
 - **Performance, Best Practices, and SEO Testing (Lighthouse):** [Lighthouse Testing Results](assets/readme/lighthouse-results-calc.pdf)
-  - Lighthouse, within the Chrome Developer Tools, was used to evaluate the ApprentiCalc's performance, best practices, and SEO. This testing provided insights into areas for optimization, such as script optimization and page load speed. The results of the Lighthouse testing would be used to make targeted improvements to the tool's performance and search engine visibility. While the mobile analysis typically provides a strong score, the desktop version may highlight opportunities for further enhancement.
+  - Lighthouse, within the Chrome Developer Tools, was used to evaluate the ApprentiCalc's performance, best practices, and SEO. This testing provided insights into areas for optimization, such as script optimization and page load speed. The results of the Lighthouse testing would be used to make targeted improvements to the tool's performance and search engine visibility. While the mobile analysis typically provides a strong score, the desktop version highlights opportunities for further enhancement.
 
   - **Lighthouse Performance Analysis:**
 
