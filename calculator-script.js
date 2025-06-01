@@ -72,4 +72,9 @@ function calculateOtjt() {
   // --- E. Planned apprenticeship duration (in weeks) (B-A) ---
   // Note 1: rounded to a full number (e.g if 52.4 -> 52; 52.6 -> 53)
   const plannedDurationWeeks = Math.round(plannedDurationDays / 7);
+
+  // --- F. Statutory leave duration (in weeks) (auto-calculates based on duration) ---
+  // Assuming 5.6 weeks statutory leave for a full year (52 weeks).
+  // Calculate proportionally based on plannedDurationWeeks.
+  const statutoryLeaveWeeks = (plannedDurationWeeks / 52) * 5.6;
 }
