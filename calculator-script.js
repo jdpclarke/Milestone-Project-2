@@ -2,7 +2,6 @@
 const startDateInput = document.getElementById("startDate");
 const endDateInput = document.getElementById("endDate");
 const weeklyHoursInput = document.getElementById("weeklyHours");
-const plannedOtjtInput = document.getElementById("plannedOtjt");
 const calculateBtn = document.getElementById("calculateBtn");
 const resetBtn = document.getElementById("resetBtn");
 
@@ -20,42 +19,43 @@ const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
 
 // Main function to perform all calculations and update the display
 function calculateOtjt() {
-  // Retrieve input values. Use `null` for dates if empty, `NaN` for numbers if empty/invalid.
-  const startDate = startDateInput.value
-    ? new Date(startDateInput.value)
-    : null;
-  const endDate = endDateInput.value ? new Date(endDateInput.value) : null;
-  let weeklyHours = parseFloat(weeklyHoursInput.value);
-  const plannedOtjt = parseFloat(plannedOtjtInput.value);
-
-  // Clear previous outputs
-  durationDaysOutput.value = "";
-  durationWeeksOutput.value = "";
-  statutoryLeaveOutput.value = "";
-  totalDurationCalculationWeeksOutput.value = "";
-  totalDurationCalculationHoursOutput.value = "";
-  minOtjtRequiredOutput.value = "";
-  finalOtjtOutput.value = ""; // Clear for initial validation check
+  // Clear previous outputs before validation
+  clearOutputFields();
 
   // --- Input Validation ---
-  // Check if mandatory fields (startDate, endDate, weeklyHours) have valid values
-  if (
-    !startDateInput.value ||
-    !endDateInput.value ||
-    isNaN(weeklyHours) ||
-    weeklyHours < 0
-  ) {
-    alert("Please fill in all mandatory fields (A, B, C) correctly."); // Changed to alert
-    // Clear any potentially lingering results from previous valid calculation
-    durationDaysOutput.value = "";
-    durationWeeksOutput.value = "";
-    statutoryLeaveOutput.value = "";
-    totalDurationCalculationWeeksOutput.value = "";
-    totalDurationCalculationHoursOutput.value = "";
-    minOtjtRequiredOutput.value = "";
-    // Removed finalOtjtOutput update here
-    // finalOtjtOutput.value = '';
-    return; // Stop calculation if essential inputs are invalid
+  // Check if mandatory input fields are empty
+  if (!startDateInput.value) {
+    alert("Please enter a start date (A).");
+    return; // Stop calculation
+  }
+  if (!endDateInput.value) {
+    alert("Please enter an end date (B).");
+    return; // Stop calculation
+  }
+
+  // Parse dates *after* checking for emptiness
+  const startDate = new Date(startDateInput.value);
+  const endDate = new Date(endDateInput.value);
+
+  // Check if parsed dates are valid (e.g., user manually typed an invalid date like "2023-02-30")
+  if (isNaN(startDate.getTime())) {
+    alert(
+      "The start date (A) you entered is not a valid date. Please check the format or value."
+    );
+    return;
+  }
+  if (isNaN(endDate.getTime())) {
+    alert(
+      "The end date (B) you entered is not a valid date. Please check the format or value."
+    );
+    return;
+  }
+
+  // Parse weekly hours and validate
+  let weeklyHours = parseFloat(weeklyHoursInput.value);
+  if (isNaN(weeklyHours) || weeklyHours <= 0) {
+    alert("Please enter valid weekly working hours (C) greater than 0.");
+    return; // Stop calculation
   }
   // --- Rule for Weekly Working Hours (C): Cap at 30 if start is on or after 1 August 2022 ---
   // Use UTC for date comparison to avoid local timezone issues
