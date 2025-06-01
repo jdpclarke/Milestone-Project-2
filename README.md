@@ -377,27 +377,27 @@ The ApprentiCalc tool was thoroughly tested across a variety of browsers and dev
 **Screenshots and User Story Fulfillment:**
 
 - **Main Calculator Interface:**
-  [Screenshot of the ApprentiCalc main interface with inputs and calculate button visible, before calculation (e.g., `assets/readme/usf-screenshot-calc-1.png`)]
+  [Screenshot of the ApprentiCalc main interface with inputs and calculate button visible, before calculation](assets/readme/usf-screenshot-calc-1.png)
   - **User Story Fulfilled:** "As an apprenticeship provider/learner, I want to quickly and accurately calculate the minimum On-The-Job (OTJ) training hours for an apprenticeship."
   - **Explanation:** This screenshot highlights the user-friendly interface of ApprentiCalc, showcasing the clear input fields for dates and weekly hours, and the prominent "Calculate" button. It demonstrates how users can easily initiate the core calculation process.
 
 - **Apprenticeship Standard Lookup in Action:**
-  [Screenshot of the ApprentiCalc with an apprenticeship standard selected from the dropdown, showing its details populated in the read-only fields below (e.g., `assets/readme/usf-screenshot-calc-2.png`)]
+  [Screenshot of the ApprentiCalc with an apprenticeship standard selected from the dropdown, showing its details populated in the read-only fields below](assets/readme/usf-screenshot-calc-2.png)
   - **User Story Fulfilled:** "As an apprenticeship professional, I want to easily look up details for a specific apprenticeship standard, such as its LARS number, level, and funding band."
   - **Explanation:** This screenshot illustrates the functionality of the apprenticeship standard lookup. It shows a standard being selected from the dropdown and its associated details instantly populating the relevant fields, fulfilling the need for quick access to standard information.
 
 - **Completed OTJ Calculation with Breakdown:**
-  [Screenshot of the ApprentiCalc after a successful calculation, showing all input fields, the full calculation breakdown (D-H), and the final highlighted result (I) (e.g., `assets/readme/usf-screenshot-calc-3.png`)]
+  [Screenshot of the ApprentiCalc after a successful calculation, showing all input fields, the full calculation breakdown (D-H), and the final highlighted result (I)](assets/readme/usf-screenshot-calc-3.png)
   - **User Story Fulfilled:** "As a user, I want to understand how the OTJ hours are calculated, so I can verify the results and explain them to others."
   - **Explanation:** This screenshot presents the calculator after a successful computation. It clearly displays the step-by-step calculation breakdown (fields D through H) leading to the final highlighted "Minimum off-the-job training required (I) in hours", allowing users to comprehend and verify the logic.
 
 - **Validation and Error Feedback:**
-  [Screenshot of the ApprentiCalc showing an alert message for invalid or missing inputs (e.g., `assets/readme/usf-screenshot-calc-4.png`)]
+  [Screenshot of the ApprentiCalc showing an alert message for invalid or missing inputs](assets/readme/usf-screenshot-calc-4.png)
   - **User Story Fulfilled:** "As a user, I want clear feedback if I enter incorrect or incomplete information, so I can correct my inputs easily."
   - **Explanation:** This screenshot captures the calculator's input validation in action, showing the alert message that appears when mandatory fields are left empty or invalid data is entered. This demonstrates that the tool provides immediate and consolidated feedback, guiding users to correct errors.
 
 - **Reset Functionality:**
-  [Screenshot of the ApprentiCalc in its initial, cleared state after the reset button has been pressed (e.g., `assets/readme/usf-screenshot-calc-5.png`)]
+  [Screenshot of the ApprentiCalc in its initial, cleared state after the reset button has been pressed](assets/readme/usf-screenshot-calc-5.png)
   - **User Story Fulfilled:** "As a user, I want to be able to reset the calculator to its initial state quickly, so I can perform new calculations without manually clearing fields."
   - **Explanation:** This screenshot shows the calculator after a user has pressed the "Reset" button. All input and output fields are cleared, demonstrating the convenience of initiating a new calculation without manual data deletion.
 
@@ -407,7 +407,7 @@ The ApprentiCalc tool was thoroughly tested across a variety of browsers and dev
   - **Explanation:** These screenshots illustrate the calculator's responsive design, adapting its layout seamlessly to smaller screen sizes of mobile phones and tablets. This confirms that users can effectively interact with the tool regardless of their device.
 
 - **Accessibility (Keyboard Navigation Focus):**
-  [Screenshot showing keyboard focus clearly visible on an interactive element (e.g., a date input field or the Calculate button) (e.g., `assets/readme/usf-screenshot-calc-7.png`)]
+  [Screenshot showing keyboard focus clearly visible on an interactive element (e.g., a date input field or the Calculate button](assets/readme/usf-screenshot-calc-7.png)
   - **User Story Fulfilled:** "As a user, I want the calculator to be fully navigable using a keyboard for accessibility purposes."
   - **Explanation:** This screenshot demonstrates the clear visual focus indicator when navigating the calculator using the Tab key. It confirms that interactive elements are easily identifiable for users who rely on keyboard input, enhancing accessibility.
 
