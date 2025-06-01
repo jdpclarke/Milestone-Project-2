@@ -1,32 +1,32 @@
 /*jslint browser: true */
 
 // Get references to all the input and output elements
-const startDateInput = document.getElementById('startDate');
-const endDateInput = document.getElementById('endDate');
-const weeklyHoursInput = document.getElementById('weeklyHours');
+const startDateInput = document.getElementById("startDate");
+const endDateInput = document.getElementById("endDate");
+const weeklyHoursInput = document.getElementById("weeklyHours");
 
-const calculateBtn = document.getElementById('calculateBtn');
-const resetBtn = document.getElementById('resetBtn');
+const calculateBtn = document.getElementById("calculateBtn");
+const resetBtn = document.getElementById("resetBtn");
 
 // Output fields are input elements
-const durationDaysOutput = document.getElementById('durationDays');
-const durationWeeksOutput = document.getElementById('durationWeeks');
-const statutoryLeaveOutput = document.getElementById('statutoryLeave');
+const durationDaysOutput = document.getElementById("durationDays");
+const durationWeeksOutput = document.getElementById("durationWeeks");
+const statutoryLeaveOutput = document.getElementById("statutoryLeave");
 const totalDurationCalculationWeeksOutput = document
-    .getElementById('totalDurationCalculationWeeks');
+    .getElementById("totalDurationCalculationWeeks");
 const totalDurationCalculationHoursOutput = document
-    .getElementById('totalDurationCalculationHours');
-const minOtjtRequiredOutput = document.getElementById('minOtjtRequired');
+    .getElementById("totalDurationCalculationHours");
+const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
 
 
 // Helper function to clear all output fields
 function clearOutputFields() {
-    durationDaysOutput.value = '';
-    durationWeeksOutput.value = '';
-    statutoryLeaveOutput.value = '';
-    totalDurationCalculationWeeksOutput.value = '';
-    totalDurationCalculationHoursOutput.value = '';
-    minOtjtRequiredOutput.value = '';
+    durationDaysOutput.value = "";
+    durationWeeksOutput.value = "";
+    statutoryLeaveOutput.value = "";
+    totalDurationCalculationWeeksOutput.value = "";
+    totalDurationCalculationHoursOutput.value = "";
+    minOtjtRequiredOutput.value = "";
 }
 
 // Main function to perform all calculations and update the display
@@ -40,10 +40,10 @@ function calculateOtjt() {
     // --- Input Validation ---
     // Check if mandatory input fields are empty
     if (!startDateInput.value) {
-        errors.push('Please enter a start date (A).');
+        errors.push("Please enter a start date (A).");
     }
     if (!endDateInput.value) {
-        errors.push('Please enter an end date (B).');
+        errors.push("Please enter an end date (B).");
     }
 
     // Parse dates *after* checking for emptiness, so we can then check their validity
@@ -52,30 +52,30 @@ function calculateOtjt() {
 
     // Check if parsed dates are valid (only if a value was provided in the first place)
     if (startDateInput.value && Number.isNaN(startDate.getTime())) {
-        errors.push('The start date (A) you entered is not a valid date. ' +
-            'Please check the format or value.');
+        errors.push("The start date (A) you entered is not a valid date. " +
+            "Please check the format or value.");
     }
     if (endDateInput.value && Number.isNaN(endDate.getTime())) {
-        errors.push('The end date (B) you entered is not a valid date. ' +
-            'Please check the format or value.');
+        errors.push("The end date (B) you entered is not a valid date. " +
+            "Please check the format or value.");
     }
 
     // Parse weekly hours and validate
     let weeklyHours = parseFloat(weeklyHoursInput.value);
     if (Number.isNaN(weeklyHours) || weeklyHours <= 0) {
-        errors.push('Please enter valid weekly working hours (C) greater than 0.');
+        errors.push("Please enter valid weekly working hours (C) greater than 0.");
     }
 
     // If there are any errors, display them all in one alert and stop the function
     if (errors.length > 0) {
-        alert('Please correct the following issues:\n\n' + errors.join('\n'));
+        alert("Please correct the following issues:\n\n" + errors.join("\n"));
         return; // Stop calculation if there are errors
     }
 
     // --- Rule for Weekly Working Hours (C): Cap at 30 if start is on or after
     //     1 August 2022 ---
     // Use UTC for date comparison to avoid local timezone issues
-    const august2022 = new Date('2022-08-01T00:00:00Z');
+    const august2022 = new Date("2022-08-01T00:00:00Z");
     if (startDate >= august2022 && weeklyHours > 30) {
         weeklyHours = 30; // Cap the value used for calculation
         weeklyHoursInput.value = 30; // Update the input field visually
@@ -121,9 +121,9 @@ function calculateOtjt() {
 // Function to reset the calculator
 function resetCalculator() {
     // Clear input fields
-    startDateInput.value = '';
-    endDateInput.value = '';
-    weeklyHoursInput.value = '';
+    startDateInput.value = "";
+    endDateInput.value = "";
+    weeklyHoursInput.value = "";
 
     // Clear all output fields
     clearOutputFields();
@@ -131,10 +131,10 @@ function resetCalculator() {
 
 // --- Event Listeners ---
 // Trigger calculation when the calculate button is clicked
-calculateBtn.addEventListener('click', calculateOtjt);
+calculateBtn.addEventListener("click", calculateOtjt);
 
 // Add event listener for the reset button
-resetBtn.addEventListener('click', resetCalculator);
+resetBtn.addEventListener("click", resetCalculator);
 
 // Perform an initial reset when the page loads to ensure clean state
 window.onload = resetCalculator;
