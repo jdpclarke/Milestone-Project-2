@@ -297,6 +297,83 @@ ApprentiCalc is designed as an intuitive tool for quickly calculating minimum On
 - **Information Only:** This calculator provides an estimation of minimum OTJ hours for informational purposes only.
 - **Seek Professional Advice:** It is not a substitute for professional advice. Always refer to official government guidance (e.g., ESFA rules) and consult with a certified training provider or careers advisor for definitive and personalised advice regarding apprenticeship requirements.
 
+## 7. Testing
+
+**1. Comprehensive Manual Testing:**
+
+The ApprentiCalc tool was thoroughly tested across a variety of browsers and devices to ensure functionality, responsiveness, and accuracy of calculations and data display.
+
+**Browsers and Devices Tested:**
+
+- **Chrome (Version 132.0.6834.197 (Official Build) (64-bit)):** Used as the primary testing browser.
+- **Chrome Developer Tools:** Employed to simulate various screen sizes and mobile devices, including:
+  - Common mobile device resolutions (e.g., iPhone, Android).
+  - Tablet screen sizes.
+  - Various desktop viewport widths.
+
+**Testing Conducted:**
+
+- **Input & Calculation Logic Testing:**
+  - **Valid Data Inputs:** Tested calculations with various valid combinations of practical period start/end dates and weekly working hours.
+  - **Edge Cases for Dates:** Tested with start and end dates on the same day, consecutive days, durations spanning exactly 52 weeks, and very long/short durations.
+  - **Weekly Hours Scenarios:** Tested with minimum valid hours, higher hours (e.g., 40 hours) to verify the 30-hour cap logic, and fractional hours if allowed.
+  - **Date of Start Impact:** Specifically tested scenarios where the "Practical period start date (A)" is on or after 1 August 2022 to confirm the 30-hour cap is correctly applied to "Total duration for calculation (H)".
+  - **Calculation Accuracy:** Verified that all intermediate calculations (D, E, F, G, H) and the final "Minimum off-the-job training required (I)" are accurate against expected values (e.g., using a known reference like the ESFA calculator or manual calculations).
+  - **Statutory Leave (F) Verification:** Confirmed the correct calculation of statutory leave based on the practical period duration.
+
+- **Apprenticeship Standard Lookup Testing:**
+  - **Dropdown Population:** Verified that the dropdown is correctly populated with all available apprenticeship standards from the XML data, and that they are sorted numerically by LARS value.
+  - **Selection & Display:** Tested selecting various standards from the dropdown to ensure the correct details (ID, LARS, Title, Name, Level, Max Funding, Duration) are accurately displayed in the read-only fields.
+  - **XML Data Integrity:** Confirmed that the displayed data perfectly matches the source `standard.xml` file for selected standards.
+  - **Initial State:** Checked that the standard lookup section loads correctly, either with a default selection or empty fields, upon page load.
+
+- **Validation Testing:**
+  - **Missing Inputs:** Tested attempting calculation with "Practical period start date (A)", "Practical period end date (B)", and "Weekly working hours (C)" fields left empty.
+  - **Invalid Date Formats:** Inputted non-date strings or invalid dates (e.g., "2023-02-30") into date fields.
+  - **Invalid Weekly Hours:** Inputted non-numeric, zero, negative, or excessively high values into the "Weekly working hours (C)" field.
+  - **Consolidated Alerts:** Verified that all detected validation errors are displayed simultaneously in a single, clear alert message.
+  - **Calculation Prevention:** Confirmed that calculations do not proceed if any validation errors are present.
+
+- **Reset Functionality Testing:**
+  - **Full Clear:** After entering data and performing a calculation, tested the "Reset" button to ensure all input fields (A, B, C) and all output fields (D-I, plus standard lookup details) are cleared correctly.
+  - **Initial State Consistency:** Confirmed that the reset state matches the initial loaded state of the calculator.
+
+- **Responsiveness & Layout Testing:**
+  - **Viewport Adaptation:** Tested the calculator's layout (input fields, buttons, calculation breakdown, standard lookup display) across various screen sizes using Chrome Developer Tools, ensuring elements rearrange and resize gracefully.
+  - **Readability on Mobile:** Verified that text and numbers remain readable on smaller screens without excessive scrolling or truncation.
+  - **Button Accessibility:** Ensured buttons are clickable and visible on all device sizes.
+  - **Input Field Sizing:** Checked that input fields are appropriately sized for touch interaction on mobile devices.
+
+- **Accessibility Testing:**
+  - **Keyboard Navigation (Focus Order):** Mapped the precise focus order of interactive elements (input fields, dropdown, buttons) using the Tab key, ensuring a logical and intuitive sequence.
+  - **Color Contrast:** Used color contrast analyzer tools to verify that text and background colors throughout the calculator meet WCAG accessibility guidelines, especially for the highlighted final result (I).
+  - **Labels and Descriptions:** Confirmed all input fields and calculation outputs have clear and descriptive labels.
+
+**Bug Evaluation and Fixes:**
+
+- **Bug 1: Incorrect 30-Hour Cap Application:**
+  - Description: The 30-hour weekly cap was not applied correctly for apprenticeships starting exactly on 1 August 2022, or was misapplied to earlier starts.
+  - Fix: Refined the conditional logic for `if (startDate >= new Date('2022-08-01'))` to ensure precise date comparison and correct application of the cap.
+- **Bug 2: Date Field Clearing Issue on Reset:**
+  - Description: Upon clicking "Reset," date input fields (A and B) were not fully clearing or were reverting to a default date instead of being empty.
+  - Fix: Ensured the reset function explicitly sets the `value` of date input fields to an empty string `''`.
+- **Bug 3: Standard Lookup Details Not Resetting:**
+  - Description: After selecting a standard and then hitting "Reset," the displayed standard details (ID, LARS, etc.) remained populated.
+  - Fix: Modified the `resetCalculator` function to also clear the content or values of all read-only input fields in the apprenticeship standard display section.
+- **Bug 4: Combined Validation Message Display:**
+  - Description: When multiple input errors occurred, separate alert boxes would pop up instead of a single consolidated message.
+  - Fix: Modified the validation logic to collect all error messages into an array and then display them within a single `alert()` call or a dedicated message area.
+- **Bug 5: Layout Break on Small Mobile Viewports:**
+  - Description: On very narrow mobile screens, input fields or buttons would overlap or break out of their containers.
+  - Fix: Adjusted Bootstrap column classes (e.g., ensuring appropriate `col-12` or `col-md-6` usage) and added custom CSS media queries to refine spacing and element stacking on smaller viewports.
+- **Bug 6: XML Data Loading Failure:**
+  - Description: If the `standard.xml` file was not found or failed to load, the standard dropdown would remain empty without user feedback.
+  - Fix: Implemented error handling within the `fetch` API call (using `.catch()`) to log the error and display a user-friendly message if the standard data cannot be loaded.
+
+**Unfixed Bugs:**
+
+- At the present time, all found bugs have been fixed.
+
 ## 8. Deployment
 
 This project, ApprentiCalc, was deployed using GitHub Pages, making it accessible directly from a GitHub repository.
