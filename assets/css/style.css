@@ -18,7 +18,14 @@
 
 /* Bootstrap Accordian Styles */
 /* Overriden the syles from Boostrap to match color palette */
+
 .accordion-button:not(.collapsed) {
+  background-color: var(--Purple);
+  color: var(--font-color-light);
+  box-shadow: none;
+}
+
+.accordion-button:is(.collapsed) {
   background-color: var(--Purple);
   color: var(--font-color-light);
   box-shadow: none;
@@ -33,6 +40,8 @@
 
 .accordion-body {
   text-align: justify;
+  background-color: var(--Blue);
+  color: var(--font-color-light);
 }
 
 .accordion-image {
