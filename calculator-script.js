@@ -106,19 +106,26 @@ function calculateOtjt() {
 }
 
 // Function to reset the calculator
-        function resetCalculator() {
-            // Clear input fields
-            startDateInput.value = '';
-            endDateInput.value = '';
-            weeklyHoursInput.value = '';
-            plannedOtjtInput.value = '';
+function resetCalculator() {
+  // Clear input fields
+  startDateInput.value = "";
+  endDateInput.value = "";
+  weeklyHoursInput.value = "";
+  plannedOtjtInput.value = "";
 
-            // Clear output fields - setting 'value' for input fields
-            durationDaysOutput.value = '';
-            durationWeeksOutput.value = '';
-            statutoryLeaveOutput.value = '';
-            totalDurationCalculationWeeksOutput.value = '';
-            totalDurationCalculationHoursOutput.value = '';
-            minOtjtRequiredOutput.value = '';
-            finalOtjtOutput.value = 'Enter details above'; // Reset to initial message
-        }
+  // Clear output fields - setting 'value' for input fields
+  durationDaysOutput.value = "";
+  durationWeeksOutput.value = "";
+  statutoryLeaveOutput.value = "";
+  totalDurationCalculationWeeksOutput.value = "";
+  totalDurationCalculationHoursOutput.value = "";
+  minOtjtRequiredOutput.value = "";
+  finalOtjtOutput.value = "Enter details above"; // Reset to initial message
+}
+
+// --- Event Listeners ---
+// Trigger calculation when the calculate button is clicked
+calculateBtn.addEventListener("click", calculateOtjt);
+
+// Add event listener for the reset button
+resetBtn.addEventListener("click", resetCalculator);
