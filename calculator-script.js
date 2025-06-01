@@ -99,9 +99,9 @@ function calculateOtjt() {
     // --- Update Display ---
     durationDaysOutput.value = plannedDurationDays.toFixed(0);
     durationWeeksOutput.value = plannedDurationWeeks.toFixed(0);
-    statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(2);
-    totalDurationCalculationWeeksOutput.value = totalDurationCalculationWeeks.toFixed(2);
-    totalDurationCalculationHoursOutput.value = totalDurationCalculationHours.toFixed(2);
+    statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(1);
+    totalDurationCalculationWeeksOutput.value = totalDurationCalculationWeeks.toFixed(1);
+    totalDurationCalculationHoursOutput.value = totalDurationCalculationHours.toFixed(0);
     // Rounded to the nearest whole number here:
     minOtjtRequiredOutput.value = minOtjtRequired.toFixed(0);
 }
