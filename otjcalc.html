@@ -99,7 +99,48 @@
     <!-- Main body of page to hold sections -->
     <main id="main">
       <!-- Instruction cards section -->
-      <section id="instructions" class="container section"></section>
+      <section id="instructions" class="container section">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="display-6">
+              <!-- Icon relating to instruction -->
+              <i class="fa-solid fa-person-chalkboard"></i> Instructions and
+              How-To:
+            </h2>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex align-items-stretch">
+            <!-- Cards from Boostrap 5 -->
+            <!-- Card for step 1-->
+            <div class="card accard">
+              <img src="" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h3 class="card-title">1. View Standard Details</h3>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex align-items-stretch">
+            <!-- Card for step 2 -->
+            <div class="card accard">
+              <img src="" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h3 class="card-title">2. Input your values</h3>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex align-items-stretch">
+            <!-- Card for step 3 -->
+            <div class="card accard">
+              <img src="" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h3 class="card-title">3. Push the Button</h3>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Form and calculation section -->
       <section id="standard-selector" class="container section">
         <div class="col-12">
@@ -349,21 +390,21 @@
                     readonly
                   />
                 </div>
-                              <div class="col-12 col-lg-6 mb-3">
-                <div class="d-grid gap-2">
-                  <button id="calculateBtn" class="btn btn-primary ac-button">
-                    Calculate Off-the-Job Training
-                  </button>
+                <div class="col-12 col-lg-6 mb-3">
+                  <div class="d-grid gap-2">
+                    <button id="calculateBtn" class="btn btn-primary ac-button">
+                      Calculate Off-the-Job Training
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-12 col-lg-6 mb-3">
-                <div class="d-grid gap-2">
-                  <button id="resetBtn" class="btn btn-primary ac-button">
-                    Reset
-                  </button>
+                <div class="col-12 col-lg-6 mb-3">
+                  <div class="d-grid gap-2">
+                    <button id="resetBtn" class="btn btn-primary ac-button">
+                      Reset
+                    </button>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -387,8 +428,8 @@
     <!-- Standard selector Javascript-->
     <script src="standard-script.js"></script>
 
-     <!-- OTJH Calculator Javascript-->
-    <script src="calculator-script.js"></script>   
+    <!-- OTJH Calculator Javascript-->
+    <script src="calculator-script.js"></script>
 
     <!-- Bootstrap JavaScript -->
     <script
