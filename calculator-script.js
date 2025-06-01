@@ -5,3 +5,16 @@ const weeklyHoursInput = document.getElementById("weeklyHours");
 const plannedOtjtInput = document.getElementById("plannedOtjt");
 const calculateBtn = document.getElementById("calculateBtn");
 const resetBtn = document.getElementById("resetBtn");
+
+// Output fields are input elements
+const durationDaysOutput = document.getElementById("durationDays");
+const durationWeeksOutput = document.getElementById("durationWeeks");
+const statutoryLeaveOutput = document.getElementById("statutoryLeave");
+const totalDurationCalculationWeeksOutput = document.getElementById(
+  "totalDurationCalculationWeeks"
+);
+const totalDurationCalculationHoursOutput = document.getElementById(
+  "totalDurationCalculationHours"
+);
+const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
+const finalOtjtOutput = document.getElementById("finalOtjt");
