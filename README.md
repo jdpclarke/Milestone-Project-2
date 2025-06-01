@@ -162,3 +162,37 @@ All images used on the website are optimised for web performance to ensure fast 
 
 - [Home Page Wireframe](assets/readme/wireframe-home.png)
 - [Calculator Page Wireframe](assets/readme/wireframe-your-guide.png)
+
+## 3. Features
+
+- **Homepage with Clear ApprentiCalc Overview:**
+  - A concise and informative introduction explaining the purpose of ApprentiCalc (simplifying OTJ hour calculation) and its benefits for apprentices and employers.
+  - Highlights the tool's focus on accuracy, compliance, and time-saving for apprenticeship planning and management.
+  - Guides users to the main calculation interface or the apprenticeship standard lookup.
+
+- **Core On-The-Job (OTJ) Calculation Functionality:**
+  - Provides intuitive input fields for apprenticeship start date, end date, and weekly working hours.
+  - Accurately calculates the planned apprenticeship duration in days and weeks.
+  - Precisely determines statutory leave duration in weeks based on the apprenticeship length.
+  - Computes the total apprenticeship duration for calculation (in weeks and hours) after deducting leave.
+  - Applies specific rules, such as capping weekly working hours at 30 for apprenticeships starting on or after 1 August 2022.
+  - Calculates the minimum required OTJ training hours as 20% of the total apprenticeship duration in hours, rounded to the nearest whole number.
+
+- **Dynamic Apprenticeship Standard Lookup & Display:**
+  - Features a dynamic dropdown list allowing users to select a specific apprenticeship standard.
+  - Populates the dropdown options by fetching and parsing data from an external XML file (e.g., `standard.xml`).
+  - Automatically displays essential details of the selected standard, such as its ID, LARS Number, Title, Name, Level, Maximum Funding, and Duration in Months and Weeks, in read-only fields.
+  - Presents standard details in a clear, organized layout (e.g., side-by-side on larger screens, stacked on smaller screens).
+
+- **Intuitive User Interaction and Feedback:**
+  - Implements immediate validation upon calculation, providing clear, combined alerts if mandatory input fields are missing or data is invalid (e.g., invalid dates, non-positive weekly hours).
+  - Displays a step-by-step breakdown of all intermediate calculation results (D through H) in clearly labelled, read-only output fields.
+  - Highlights the final "Minimum off-the-job training required" field (I) with a distinct background color for easy identification.
+  - Includes a prominent "Reset" button that clears all input and output fields, allowing users to easily start a new calculation.
+
+- **Responsive and Accessible Design:**
+  - Website layout seamlessly adapts to various screen sizes and orientations, ensuring optimal usability on desktops, laptops, tablets, and mobile phones.
+  - All input fields, buttons, and output displays are functionally accessible and clearly visible across different devices.
+  - Utilizes standard web practices to ensure basic accessibility (e.g., clear labels, sufficient color contrast, keyboard navigability for interactive elements).
+  - Maintains separation of HTML structure, CSS styling, and JavaScript logic in distinct files for improved maintainability and organization.
+  
