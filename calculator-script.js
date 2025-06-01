@@ -104,3 +104,21 @@ function calculateOtjt() {
     totalDurationCalculationHours.toFixed(2);
   minOtjtRequiredOutput.value = minOtjtRequired.toFixed(2);
 }
+
+// Function to reset the calculator
+        function resetCalculator() {
+            // Clear input fields
+            startDateInput.value = '';
+            endDateInput.value = '';
+            weeklyHoursInput.value = '';
+            plannedOtjtInput.value = '';
+
+            // Clear output fields - setting 'value' for input fields
+            durationDaysOutput.value = '';
+            durationWeeksOutput.value = '';
+            statutoryLeaveOutput.value = '';
+            totalDurationCalculationWeeksOutput.value = '';
+            totalDurationCalculationHoursOutput.value = '';
+            minOtjtRequiredOutput.value = '';
+            finalOtjtOutput.value = 'Enter details above'; // Reset to initial message
+        }
