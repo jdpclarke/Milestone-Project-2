@@ -102,102 +102,128 @@
       <section id="instructions" class="container section"></section>
       <!-- Form and calculation section -->
       <section id="standard-selector" class="container section">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10">
-            <!-- section header and maginifying glass icon -->
-            <h3>
-              <i class="fa-solid fa-magnifying-glass"></i> View an
-              Apprenticeship Standard
-            </h3>
-            <h6>
-              Select an apprenticeship using the drop down below to view key
-              information about the standard
-            </h6>
-            <!-- Use the drop down to to change the data in the standard fields -->
-            <div class="row">
-              <div class="col-12 mb-3">
-                <label for="standard-select" class="form-label"
-                  >Select an Apprenticeship Standard:</label
-                >
-                <select id="standard-select" class="form-control">
-                  <option value="">-- Select a Standard --</option>
-                </select>
-              </div>
-              <div class="col-12 col-lg-4 mb-2">
-                <label for="id" class="form-label">Standard Code: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="id"
-                  name="id"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-4 mb-2">
-                <label for="lars" class="form-label">LARS Number: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="lars"
-                  name="lars"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-4 mb-2">
-                <label for="level" class="form-label">Level: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="level"
-                  name="level"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-6 mb-3">
-                <label for="name" class="form-label">Name: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="name"
-                  name="name"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-6 mb-3">
-                <label for="funding_maximum" class="form-label"
-                  >Maximum Funding (£):
-                </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="funding_maximum"
-                  name="funding_maximum"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-6 mb-3">
-                <label for="months" class="form-label"
-                  >Recommended Duration (Months):
-                </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="months"
-                  name="months"
-                  readonly
-                />
-              </div>
-              <div class="col-12 col-lg-6 mb-3">
-                <label for="weeks" class="form-label"
-                  >Recommended Duration (Weeks):
-                </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="weeks"
-                  name="weeks"
-                  readonly
-                />
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                <h3>
+                  <i class="fa-solid fa-magnifying-glass"></i> View an
+                  Apprenticeship Standard
+                </h3>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10">
+                    <h6>
+                      Select an apprenticeship using the drop down below to view
+                      key information about the standard
+                    </h6>
+                    <!-- Use the drop down to to change the data in the standard fields -->
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label for="standard-select" class="form-label"
+                          >Select an Apprenticeship Standard:</label
+                        >
+                        <select id="standard-select" class="form-control">
+                          <option value="">-- Select a Standard --</option>
+                        </select>
+                      </div>
+                      <div class="col-12 col-lg-4 mb-2">
+                        <label for="id" class="form-label"
+                          >Standard Code:
+                        </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="id"
+                          name="id"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-4 mb-2">
+                        <label for="lars" class="form-label"
+                          >LARS Number:
+                        </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="lars"
+                          name="lars"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-4 mb-2">
+                        <label for="level" class="form-label">Level: </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="level"
+                          name="level"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-3">
+                        <label for="name" class="form-label">Name: </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="name"
+                          name="name"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-3">
+                        <label for="funding_maximum" class="form-label"
+                          >Maximum Funding (£):
+                        </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="funding_maximum"
+                          name="funding_maximum"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-3">
+                        <label for="months" class="form-label"
+                          >Recommended Duration (Months):
+                        </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="months"
+                          name="months"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-12 col-lg-6 mb-3">
+                        <label for="weeks" class="form-label"
+                          >Recommended Duration (Weeks):
+                        </label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="weeks"
+                          name="weeks"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
