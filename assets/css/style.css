@@ -16,6 +16,34 @@
   --Pink: #bb04a9; /* Violet Eggplant */
 }
 
+/* Bootstrap Accordian Styles */
+/* Overriden the syles from Boostrap to match color palette */
+.accordion-button:not(.collapsed) {
+  background-color: var(--Purple);
+  color: var(--font-color-light);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  /* Style when the accordion is focused */
+  border-color: #ced4da;
+  box-shadow: none;
+  color: #212529;
+}
+
+.accordion-body {
+  text-align: justify;
+}
+
+.accordion-image {
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Button Styles */
 /* Styles the buttons to match the design of the website and applies a hover interaction */
 .ac-button {
@@ -129,32 +157,4 @@ h6 {
 
 p {
   text-align: justify;
-}
-
-/* Bootstrap Accordian Styles */
-/* Overriden the syles from Boostrap to match color palette */
-.accordion-button:not(.collapsed) {
-  background-color: var(--Purple);
-  color: var(--font-color-light);
-  box-shadow: none;
-}
-
-.accordion-button:focus {
-  /* Style when the accordion is focused */
-  border-color: #ced4da;
-  box-shadow: none;
-  color: #212529;
-}
-
-.accordion-body {
-  text-align: justify;
-}
-
-.accordion-image {
-  margin-bottom: 1rem;
-}
-
-.accordion {
-  margin-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
 }
