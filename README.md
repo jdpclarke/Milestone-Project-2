@@ -255,3 +255,44 @@ To view and run the ApprentiCalc website locally, follow these steps:
 - If you wish to make changes to the code, you can use a text editor or code editor (e.g., VS Code) to edit the HTML, CSS, and JavaScript files.
 - If you have made changes to the website, simply save the files and refresh your browser to view the updated content.
 - If you have not got git installed you can also download the zip file of the repository, and extract it to your chosen location.
+
+## 6. Usage
+
+ApprentiCalc is designed as an intuitive tool for quickly calculating minimum On-The-Job (OTJ) training hours and looking up apprenticeship standard details. Here's a guide to effectively using the calculator:
+
+**1. Interface Overview:**
+
+- **Input Fields Section:** This area is where you provide the necessary details for your calculation, including dates and weekly working hours.
+- **Calculation Breakdown Section:** This section dynamically displays the step-by-step results of the OTJ calculation.
+- **Action Buttons:** Clearly labeled buttons are provided to trigger calculations and reset the tool.
+- **Responsive Design:** The entire calculator interface adapts to different screen sizes, ensuring usability on desktops, tablets, and mobile devices.
+
+**2. Selecting an Apprenticeship Standard:**
+
+- **Standard Selection Dropdown:** Use the dropdown menu (if available on your version) to choose an apprenticeship standard.
+- **Automatic Detail Display:** Upon selecting a standard, its key details (e.g., ID, LARS Number, Title, Name, Level, Maximum Funding, Duration in Months, Duration in Weeks) will automatically populate the read-only fields below the dropdown, providing immediate context.
+
+**3. Performing On-The-Job (OTJ) Calculation:**
+
+- **Enter Dates:** Input the "Practical period start date (A)" and "Practical period end date (B)" using the date pickers.
+- **Enter Weekly Hours:** Provide the "Weekly working hours (C)". Note that the system will automatically cap this at 30 hours if your apprenticeship starts on or after 1 August 2022.
+- **Initiate Calculation:** Click the "Calculate Off-the-Job Training" button to process your inputs and display the results.
+
+**4. Understanding Calculation Results:**
+
+- **Breakdown Fields (D-H):** Review the "Calculation Breakdown" section. Each field (Planned apprenticeship duration in days/weeks, Statutory leave duration, Total duration for calculation in weeks/hours) details an intermediate step in the calculation.
+- **Minimum OTJ Required (I):** The final calculated "Minimum off-the-job training required (in hours)" is highlighted with a distinct background color for easy identification, representing the core output.
+
+**5. Resetting the Calculator:**
+
+- **Reset Button:** To clear all entered data and calculated results, click the "Reset" button. This prepares the calculator for a new entry.
+
+**6. Input Validation and Feedback:**
+
+- **Alert Messages:** If any mandatory fields are left blank or invalid data is entered (e.g., incorrect date format, non-positive hours), an alert box will appear.
+- **Consolidated Feedback:** All identified errors will be displayed in a single alert message, prompting you to correct all issues before proceeding with the calculation.
+
+**7. Important Note & Disclaimer:**
+
+- **Information Only:** This calculator provides an estimation of minimum OTJ hours for informational purposes only.
+- **Seek Professional Advice:** It is not a substitute for professional advice. Always refer to official government guidance (e.g., ESFA rules) and consult with a certified training provider or careers advisor for definitive and personalised advice regarding apprenticeship requirements.
