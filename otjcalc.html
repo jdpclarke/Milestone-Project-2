@@ -102,125 +102,127 @@
       <section id="instructions" class="container section"></section>
       <!-- Form and calculation section -->
       <section id="standard-selector" class="container section">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
+        <div class="col-12">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  <h3>
+                    <i class="fa-solid fa-magnifying-glass"></i> View an
+                    Apprenticeship Standard
+                  </h3>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
               >
-                <h3>
-                  <i class="fa-solid fa-magnifying-glass"></i> View an
-                  Apprenticeship Standard
-                </h3>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseOne"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div class="accordion-body">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-md-12">
-                    <h5>
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      Select an apprenticeship using the drop down below to view
-                      key information about the standard
-                    </h5>
-                    <!-- Use the drop down to to change the data in the standard fields -->
-                    <div class="row">
-                      <div class="col-12 mb-3">
-                        <label for="standard-select" class="form-label"
-                          >Select an Apprenticeship Standard:</label
-                        >
-                        <select id="standard-select" class="form-control">
-                          <option value="">-- Select a Standard --</option>
-                        </select>
-                      </div>
-                      <div class="col-12 col-lg-4 mb-2">
-                        <label for="id" class="form-label"
-                          >Standard Code:
-                        </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="id"
-                          name="id"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-4 mb-2">
-                        <label for="lars" class="form-label"
-                          >LARS Number:
-                        </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="lars"
-                          name="lars"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-4 mb-2">
-                        <label for="level" class="form-label">Level: </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="level"
-                          name="level"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-6 mb-3">
-                        <label for="name" class="form-label">Name: </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="name"
-                          name="name"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-6 mb-3">
-                        <label for="funding_maximum" class="form-label"
-                          >Maximum Funding (£):
-                        </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="funding_maximum"
-                          name="funding_maximum"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-6 mb-3">
-                        <label for="months" class="form-label"
-                          >Recommended Duration (Months):
-                        </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="months"
-                          name="months"
-                          readonly
-                        />
-                      </div>
-                      <div class="col-12 col-lg-6 mb-3">
-                        <label for="weeks" class="form-label"
-                          >Recommended Duration (Weeks):
-                        </label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          id="weeks"
-                          name="weeks"
-                          readonly
-                        />
+                <div class="accordion-body">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-md-12">
+                      <h5>
+                        <i class="fa-solid fa-arrow-pointer"></i> Select an
+                        apprenticeship using the drop down below to view key
+                        information about the standard
+                      </h5>
+                      <!-- Use the drop down to to change the data in the standard fields -->
+                      <div class="row">
+                        <div class="col-12 mb-3">
+                          <label for="standard-select" class="form-label"
+                            >Select an Apprenticeship Standard:</label
+                          >
+                          <select id="standard-select" class="form-control">
+                            <option value="">-- Select a Standard --</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-lg-4 mb-2">
+                          <label for="id" class="form-label"
+                            >Standard Code:
+                          </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="id"
+                            name="id"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-4 mb-2">
+                          <label for="lars" class="form-label"
+                            >LARS Number:
+                          </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="lars"
+                            name="lars"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-4 mb-2">
+                          <label for="level" class="form-label">Level: </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="level"
+                            name="level"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="name" class="form-label">Name: </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="name"
+                            name="name"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="funding_maximum" class="form-label"
+                            >Maximum Funding (£):
+                          </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="funding_maximum"
+                            name="funding_maximum"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="months" class="form-label"
+                            >Recommended Duration (Months):
+                          </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="months"
+                            name="months"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="weeks" class="form-label"
+                            >Recommended Duration (Weeks):
+                          </label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            id="weeks"
+                            name="weeks"
+                            readonly
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -231,7 +233,142 @@
         </div>
       </section>
       <!-- Calculator form -->
-      <section id="otj-calculator" class="container section"></section>
+      <section id="otj-calculator" class="container section">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12">
+            <h2>
+              <i class="fa-solid fa-calculator"></i> Calculate the minimum OTJH!
+            </h2>
+            <h6>
+              Please complete the fields labelled A-C to allow the minimum OTJH
+              calculation (I) to be generated:
+            </h6>
+            <!-- 3 fields used to populate the calculation-->
+            <div class="row">
+              <div class="col-12 col-lg-4 mb-2">
+                <label for="startDate" class="form-label"
+                  >A. Practical period start date <br />
+                  (Learning Start Date)</label
+                ><br />
+                <input
+                  type="date"
+                  id="startDate"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-12 col-lg-4 mb-2">
+                <label for="endDate" class="form-label"
+                  >B. Practical period end date <br />
+                  (Learning Planned End Date)</label
+                ><br />
+                <input type="date" id="endDate" class="form-control" required />
+              </div>
+              <div class="col-12 col-lg-4 mb-2">
+                <label for="weeklyHours" class="form-label"
+                  >C. Weekly working hours <br />
+                  (Max 30 if start is on/after 01/08/2022)</label
+                ><br />
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weeklyHours"
+                  min="0"
+                  step="0.1"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-12">
+              <div class="row">
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="durationdays" class="form-label"
+                    >D. Planned apprenticeship duration (in days)</label
+                  >
+                  <input
+                    type="text"
+                    id="durationDays"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="durationweeks" class="form-label"
+                    >E. Planned apprenticeship duration (in weeks)</label
+                  ><br />
+                  <input
+                    type="text"
+                    id="durationWeeks"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="statutoryLeave" class="form-label"
+                    >F. Statutory leave duration (in weeks)</label
+                  >
+                  <input
+                    type="text"
+                    id="statutoryLeave"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="totalDurationCalculationWeeks" class="form-label"
+                    >G. Total apprenticeship duration for calculation (in
+                    weeks)</label
+                  >
+                  <input
+                    type="text"
+                    id="totalDurationCalculationWeeks"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="totalDurationCalculationHours" class="form-label"
+                    >H. Total apprenticeship duration for calculation (in
+                    hours)</label
+                  >
+                  <input
+                    type="text"
+                    id="totalDurationCalculationHours"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                  <label for="minOtjtRequired" class="form-label"
+                    >I. Minimum off-the-job training required (in hours)</label
+                  >
+                  <input
+                    type="text"
+                    id="minOtjtRequired"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                              <div class="col-12 col-lg-6 mb-3">
+                <div class="d-grid gap-2">
+                  <button id="calculateBtn" class="btn btn-primary ac-button">
+                    Calculate Off-the-Job Training
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 mb-3">
+                <div class="d-grid gap-2">
+                  <button id="resetBtn" class="btn btn-primary60 ac-button">
+                    Reset
+                  </button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer showing disclaimer/copyright, contact details, social links and a map with location -->
     <!-- Class added to ensure this remains at the bottom of the page -->
@@ -249,6 +386,9 @@
 
     <!-- Standard selector Javascript-->
     <script src="standard-script.js"></script>
+
+     <!-- OTJH Calculator Javascript-->
+    <script src="calculator-script.js"></script>   
 
     <!-- Bootstrap JavaScript -->
     <script
