@@ -52,6 +52,10 @@
   margin-bottom: 3rem;
 }
 
+.body-image {
+  height: fit-content;
+}
+
 /* Button Styles */
 /* Styles the buttons to match the design of the website and applies a hover interaction */
 .ac-button {
