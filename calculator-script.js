@@ -17,4 +17,35 @@ const totalDurationCalculationHoursOutput = document.getElementById(
   "totalDurationCalculationHours"
 );
 const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
-const finalOtjtOutput = document.getElementById("finalOtjt");
+
+        // Main function to perform all calculations and update the display
+        function calculateOtjt() {
+            // Retrieve input values. Use `null` for dates if empty, `NaN` for numbers if empty/invalid.
+            const startDate = startDateInput.value ? new Date(startDateInput.value) : null;
+            const endDate = endDateInput.value ? new Date(endDateInput.value) : null;
+            let weeklyHours = parseFloat(weeklyHoursInput.value);
+            const plannedOtjt = parseFloat(plannedOtjtInput.value);
+
+            // Clear previous outputs
+            durationDaysOutput.value = '';
+            durationWeeksOutput.value = '';
+            statutoryLeaveOutput.value = '';
+            totalDurationCalculationWeeksOutput.value = '';
+            totalDurationCalculationHoursOutput.value = '';
+            minOtjtRequiredOutput.value = '';
+            finalOtjtOutput.value = ''; // Clear for initial validation check
+
+            // --- Input Validation ---
+            // Check if mandatory fields (startDate, endDate, weeklyHours) have valid values
+            if (!startDateInput.value || !endDateInput.value || isNaN(weeklyHours) || weeklyHours < 0) {
+                finalOtjtOutput.value = 'Please fill in all mandatory fields (A, B, C) correctly.';
+                // Clear any potentially lingering results from previous valid calculation
+                durationDaysOutput.value = '';
+                durationWeeksOutput.value = '';
+                statutoryLeaveOutput.value = '';
+                totalDurationCalculationWeeksOutput.value = '';
+                totalDurationCalculationHoursOutput.value = '';
+                minOtjtRequiredOutput.value = '';
+                return; // Stop calculation if essential inputs are invalid
+            }
+        }
