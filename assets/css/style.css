@@ -19,55 +19,55 @@
 /* Button Styles */
 /* Styles the buttons to match the design of the website and applies a hover interaction */
 .ac-button {
-    color: var(--font-color-light);
-    font-family: var(--primary-font);
-    font-weight: bold;
-    background-color: var(--Blue);
-    border-color: var(--Purple);
-    border-width: 4px;
+  color: var(--font-color-light);
+  font-family: var(--primary-font);
+  font-weight: bold;
+  background-color: var(--Blue);
+  border-color: var(--Purple);
+  border-width: 4px;
 
-    margin-top: 0.5rem;
-    transition: color 2s ease-in-out;
-  }
-  
-  /* Hover interaction */
-  .ac-button:hover {
-    background-color: var(--IfATE);
-    border-color: var(--Purple);
-  }
+  margin-top: 0.5rem;
+  transition: color 2s ease-in-out;
+}
+
+/* Hover interaction */
+.ac-button:hover {
+  background-color: var(--IfATE);
+  border-color: var(--Purple);
+}
 
 /* Element Styles */
 .accard {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Styles for links and to make them reactive */
 .inline-link {
-    font-family: var(--primary-font);
-    font-weight: bolder;
-    padding: 5px;
-    color: var(--IfATE);
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .inline-link:hover {
-    color: var(--Purple);
-  }
+  font-family: var(--primary-font);
+  font-weight: bolder;
+  padding: 5px;
+  color: var(--IfATE);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.inline-link:hover {
+  color: var(--Purple);
+}
 
 /* Header */
 /* Applies secondary font to all elements in the header with the lead class */
 #header {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .header-image {
-    height:fit-content;
+  height: fit-content;
 }
 
 #main {
-    margin-bottom: 3rem; 
+  margin-bottom: 3rem;
 }
 
 /* Navigation Menu */
@@ -83,22 +83,22 @@
 
 /* Manages the font size of the text on the nav menu */
 #navbar a {
-    font-size: 1.25rem;
-  }
+  font-size: 1.25rem;
+}
 
 #main {
-    flex-grow: 1
+  flex-grow: 1;
 }
 
 /* Footer for all pages */
 #footer {
-    font-family: var(--primary-font);
-    background-color: var(--Pink);
-    padding-top: 1rem;
-  }
+  font-family: var(--primary-font);
+  background-color: var(--Pink);
+  padding-top: 1rem;
+}
 
 #footer p {
-    text-align: center;
+  text-align: center;
 }
 
 /* Basic and Universal Styles across all pages*/
@@ -109,27 +109,52 @@ body {
 
   padding-top: 103.78px;
 }
-  
-  h1,
-  h2,
-  h3 {
-    font-family: var(--secondary-font);
-    color: var(--font-color-light);
-  }
-  
-  h4 {
-    font-family: var(--secondary-font);
-    color: var(--font-color-light);
-  }
-  
-  h2,
-  h6 {
-    margin-bottom: 2rem;
-  }
-  
-  p {
-    text-align: justify;
-  }
 
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+  color: var(--font-color-light);
+}
 
- 
+h4 {
+  font-family: var(--secondary-font);
+  color: var(--font-color-light);
+}
+
+h2,
+h6 {
+  margin-bottom: 2rem;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Bootstrap Accordian Styles */
+/* Overriden the syles from Boostrap to match color palette */
+.accordion-button:not(.collapsed) {
+  background-color: var(--Purple);
+  color: var(--font-color-light);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  /* Style when the accordion is focused */
+  border-color: #ced4da;
+  box-shadow: none;
+  color: #212529;
+}
+
+.accordion-body {
+  text-align: justify;
+}
+
+.accordion-image {
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
