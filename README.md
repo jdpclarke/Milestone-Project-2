@@ -195,4 +195,26 @@ All images used on the website are optimised for web performance to ensure fast 
   - All input fields, buttons, and output displays are functionally accessible and clearly visible across different devices.
   - Utilizes standard web practices to ensure basic accessibility (e.g., clear labels, sufficient color contrast, keyboard navigability for interactive elements).
   - Maintains separation of HTML structure, CSS styling, and JavaScript logic in distinct files for improved maintainability and organization.
-  
+
+## 4. Technology Used
+
+ApprentiCalc, an interactive tool designed to simplify apprenticeship On-The-Job (OTJ) hour calculations and provide apprenticeship standard details, was built using a combination of front-end web development technologies to ensure an accurate, responsive, and user-friendly experience.
+
+- **HTML5:** HTML5 was used as the foundation for the calculator's structure and content. Semantic HTML5 elements were employed to create a logical and accessible document outline, enhancing readability and maintainability.
+
+- **CSS3:** CSS3 was used for styling the calculator's interface and controlling its visual presentation. Custom CSS rules were written to define the layout, typography, colours, and specific visual highlights, such as the distinct background color for the final OTJ hour output.
+
+- **JavaScript:** JavaScript is the core of ApprentiCalc's interactivity and logic. It was used to implement all custom functionalities, including:
+  - Fetching and parsing external XML data for apprenticeship standard lookup.
+  - Performing all complex date and numerical calculations for OTJ hours.
+  - Implementing robust input validation and providing consolidated error feedback.
+  - Dynamically updating the user interface based on inputs and calculations.
+  - Handling event listeners for user interactions (e.g., button clicks, dropdown selections).
+
+- **XML:** An external XML file (`standard.xml`) serves as the data source for apprenticeship standard details within the calculator's lookup feature. JavaScript's `fetch` API and `DOMParser` are utilized to asynchronously load and interpret this structured data.
+
+- **Bootstrap 5:** Bootstrap 5, a popular front-end framework, was utilized to create a responsive and mobile-first design for the calculator's layout. Its grid system facilitates flexible arrangement of input and output fields, ensuring seamless adaptation to different screen sizes.
+
+- **Font Awesome:** Font Awesome icons were integrated into the website to enhance visual appeal and improve user experience. Icons were used to represent different sections and concepts, making the content more engaging and easier to understand. The use of icons also contributes to a more intuitive navigation experience.
+
+- **CDN (Content Delivery Network):** External libraries, such as Bootstrap's CSS and JavaScript, are loaded from a CDN. This optimizes loading times by utilizing geographically distributed servers to deliver content efficiently.
