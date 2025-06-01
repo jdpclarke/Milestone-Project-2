@@ -18,6 +18,16 @@ const totalDurationCalculationHoursOutput = document.getElementById(
 );
 const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
 
+// Helper function to clear all output fields
+function clearOutputFields() {
+  durationDaysOutput.value = "";
+  durationWeeksOutput.value = "";
+  statutoryLeaveOutput.value = "";
+  totalDurationCalculationWeeksOutput.value = "";
+  totalDurationCalculationHoursOutput.value = "";
+  minOtjtRequiredOutput.value = "";
+}
+
 // Main function to perform all calculations and update the display
 function calculateOtjt() {
   // Clear previous outputs before validation
@@ -100,16 +110,6 @@ function calculateOtjt() {
   totalDurationCalculationHoursOutput.value =
     totalDurationCalculationHours.toFixed(2);
   minOtjtRequiredOutput.value = minOtjtRequired.toFixed(2);
-}
-
-// Helper function to clear all output fields
-function clearOutputFields() {
-  durationDaysOutput.value = "";
-  durationWeeksOutput.value = "";
-  statutoryLeaveOutput.value = "";
-  totalDurationCalculationWeeksOutput.value = "";
-  totalDurationCalculationHoursOutput.value = "";
-  minOtjtRequiredOutput.value = "";
 }
 
 // Function to reset the calculator
