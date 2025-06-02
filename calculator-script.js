@@ -13,10 +13,8 @@ const resetBtn = document.getElementById("resetBtn");
 const durationDaysOutput = document.getElementById("durationdays");
 const durationWeeksOutput = document.getElementById("durationweeks");
 const statutoryLeaveOutput = document.getElementById("statutoryLeave");
-const totalDurationCalculationWeeksOutput = document
-    .getElementById("totalDurationCalculationWeeks");
-const totalDurationCalculationHoursOutput = document
-    .getElementById("totalDurationCalculationHours");
+const totalDurationCalculationWeeksOutput = document.getElementById("totalDurationCalculationWeeks");
+const totalDurationCalculationHoursOutput = document.getElementById("totalDurationCalculationHours");
 const minOtjtRequiredOutput = document.getElementById("minOtjtRequired");
 
 
@@ -55,18 +53,16 @@ function calculateOtjt() {
     // Check if parsed dates are valid
     // (only if a value was provided in the first place)
     if (startDateInput.value && Number.isNaN(startDate.getTime())) {
-        errors.push("The start date (A) you entered is not a valid date. " +
-            "Please check the format or value.");
+        errors.push("The start date (A) you entered is not a valid date. " + "Please check the format or value.");
     }
     if (endDateInput.value && Number.isNaN(endDate.getTime())) {
-        errors.push("The end date (B) you entered is not a valid date. " +
-            "Please check the format or value.");
+        errors.push("The end date (B) you entered is not a valid date. " + "Please check the format or value.");
     }
 
     // Parse weekly hours and validate
     let weeklyHours = parseFloat(weeklyHoursInput.value);
     if (Number.isNaN(weeklyHours) || weeklyHours <= 0) {
-        errors.push("Please enter valid weekly working hours (C) greater than 0.");
+        errors.push("Please enter valid weekly working hours " + "(C) greater than 0.");
     }
 
     // If there are any errors,
@@ -87,8 +83,7 @@ function calculateOtjt() {
 
     // --- D. Planned apprenticeship duration (in days) (B-A) ---
     const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
-    const plannedDurationDays = Math.ceil(diffTime /
-        (1000 * 60 * 60 * 24));
+    const plannedDurationDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
     // --- E. Planned apprenticeship duration (in weeks) (B-A) ---
     const plannedDurationWeeks = Math.round(plannedDurationDays / 7);
@@ -100,12 +95,11 @@ function calculateOtjt() {
     // --- G. Total apprenticeship duration for calculation (E-F) (in weeks) ---
     let totalDurationCalculationWeeks = plannedDurationWeeks - statutoryLeaveWeeks;
     if (totalDurationCalculationWeeks < 0) {
-           totalDurationCalculationWeeks = 0;
+        totalDurationCalculationWeeks = 0;
     }
 
     // --- H. Total apprenticeship duration for calculation (C*G) (in hours) ---
-    const totalDurationCalculationHours = weeklyHours *
-        totalDurationCalculationWeeks;
+    const totalDurationCalculationHours = weeklyHours * totalDurationCalculationWeeks;
 
     // --- I. Minimum off-the-job training required (H x 20%) (in hours) ---
     const minOtjtRequired = totalDurationCalculationHours * 0.20;
@@ -114,10 +108,8 @@ function calculateOtjt() {
     durationDaysOutput.value = plannedDurationDays.toFixed(0);
     durationWeeksOutput.value = plannedDurationWeeks.toFixed(0);
     statutoryLeaveOutput.value = statutoryLeaveWeeks.toFixed(1);
-    totalDurationCalculationWeeksOutput.value =
-        totalDurationCalculationWeeks.toFixed(1);
-    totalDurationCalculationHoursOutput.value =
-        totalDurationCalculationHours.toFixed(0);
+    totalDurationCalculationWeeksOutput.value = totalDurationCalculationWeeks.toFixed(1);
+    totalDurationCalculationHoursOutput.value = totalDurationCalculationHours.toFixed(0);
     // Rounded to the nearest whole number here:
     minOtjtRequiredOutput.value = minOtjtRequired.toFixed(0);
 }
