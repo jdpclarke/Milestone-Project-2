@@ -428,7 +428,7 @@ The ApprentiCalc tool was thoroughly tested across a variety of browsers and dev
     W3C CSS Validation highlightswarnings related to Bootstrap CSS, which are typically outside the developer's direct control. Warnings referring to custom CSS variables are often noted by the validator, as it acknowledges that CSS variables introduce a level of dynamism beyond the scope of its static analysis.
 
 - **JavaScript Validation (JSLint)**
-    The JavaScript code for ApprentiCalc was validated using **JSLint**, a strict code quality tool. JSLint enforces a robust set of coding conventions to ensure clean, consistent, and maintainable JavaScript.
+    The JavaScript code for ApprentiCalc was validated using [JSLint](https://www.jslint.com/), a strict code quality tool. JSLint enforces a robust set of coding conventions to ensure clean, consistent, and maintainable JavaScript.
 
     The validation process focused on:
   - **Syntax Errors:** Eliminating common coding mistakes.
