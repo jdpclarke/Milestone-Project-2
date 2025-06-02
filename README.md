@@ -2,6 +2,8 @@
 
 **A website providing a user friendly Minimum Off-The-Job Hours (MinimumOTJH) calculator for apprenticeship standards as per the Insitute for Apprenticeships and Technical Education (IfATE) website and databse.**
 
+![Responsive Mockup](assets/readme/mockup.png)
+
 ## 1. Overview
 
 Confused about minimum On-The-Job (OTJ) hours for your apprenticeship? ApprentiCalc is a simple and intuitive tool designed to quickly calculate the required minimum OTJ hours, helping apprentices and employers easily understand and track progress.
