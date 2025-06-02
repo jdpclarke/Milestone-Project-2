@@ -427,6 +427,21 @@ The ApprentiCalc tool was thoroughly tested across a variety of browsers and dev
 
     W3C CSS Validation highlightswarnings related to Bootstrap CSS, which are typically outside the developer's direct control. Warnings referring to custom CSS variables are often noted by the validator, as it acknowledges that CSS variables introduce a level of dynamism beyond the scope of its static analysis.
 
+- **JavaScript Validation (JSLint)**
+    The JavaScript code for ApprentiCalc was validated using **JSLint**, a strict code quality tool. JSLint enforces a robust set of coding conventions to ensure clean, consistent, and maintainable JavaScript.
+
+    The validation process focused on:
+  - **Syntax Errors:** Eliminating common coding mistakes.
+  - **Global Variables:** Explicitly declaring all global variables to prevent accidental globals and improve clarity.
+  - **`this` Context:** Addressing strict `this` context rules by explicitly referencing elements or capturing `this` where necessary.
+  - **Arrow Functions vs. Function Expressions:** Converting "complex" arrow functions to traditional function expressions as preferred by JSLint.
+
+    While most JSLint warnings and errors were addressed, the "Line is longer than 80 characters" warning remains. This specific warning, while present, **does not impact the functionality or performance** of the scripts. Efforts to conform to this very strict line length often introduced other JSLint-specific formatting errors due to the linter's highly opinionated rules on line breaks and indentation. For this reason, and because it does not affect script operation, this particular warning was accepted.
+
+    The results for each script can be found below:
+  - [calculator-script.js](assets/readme/jslint-calculator-script-result.pdf)
+  - [standard-script.js](assets/readme/jslint-standard-script-result.pdf)
+
 - **Performance, Best Practices, and SEO Testing (Lighthouse):** [Lighthouse Testing Results](assets/readme/lighthouse-results-calc.pdf)
   - Lighthouse, within the Chrome Developer Tools, was used to evaluate the ApprentiCalc's performance, best practices, and SEO. This testing provided insights into areas for optimization, such as script optimization and page load speed. The results of the Lighthouse testing would be used to make targeted improvements to the tool's performance and search engine visibility. While the mobile analysis typically provides a strong score, the desktop version highlights opportunities for further enhancement.
 
