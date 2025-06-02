@@ -163,7 +163,7 @@ All images used on the website are optimised for web performance to ensure fast 
 ### Wireframes
 
 - [Home Page Wireframe](assets/readme/wireframe-home.png)
-- [Calculator Page Wireframe](assets/readme/wireframe-your-guide.png)
+- [Calculator Page Wireframe](assets/readme/wireframe-calculator.png)
 
 ## 3. Features
 
